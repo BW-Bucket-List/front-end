@@ -8,9 +8,9 @@ import NavBar from './components/NavBar/NavBar';
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <Login />
-      <Register />
-      {/* <NavBar /> */}
+      {/* <Register /> */}
       {/* <ProfilePage /> */}
     </div>
   );
