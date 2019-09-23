@@ -23,4 +23,11 @@ const Login = (props) =>{
         props.history.push('')      
       })
   }
+
+  return(
+    <div className="loginPage">
+      <h1>Login</h1>
+      
+    </div>
+  )
 }
