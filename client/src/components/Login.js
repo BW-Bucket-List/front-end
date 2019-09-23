@@ -45,7 +45,7 @@ const Login = (props) =>{
         />
         <button>Login</button>
       </form>
-      <Link to="">Click here to create account</Link>
+      <p>Don't have an account?{' '}<Link to=''>click here!</Link></p>
     </div>
   )
 }
