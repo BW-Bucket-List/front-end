@@ -1,5 +1,6 @@
 import React from 'react';
-import './ProfilePage.css'
+import './ProfilePage.css';
+import { Link } from 'react-router-dom';
 
 function ProfilePage() {
     return (
@@ -12,6 +13,9 @@ function ProfilePage() {
                         <h1>Name:</h1>
                         <h2>Email:</h2>
                         <h2>Private:</h2>
+                        <Link>
+                        <button>View Bucket</button>
+                        </Link>
                  </div> {/* profile-info end */}
 
                  

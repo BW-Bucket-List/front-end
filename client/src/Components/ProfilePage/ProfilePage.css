@@ -1,7 +1,7 @@
 .top-section-profile {
     display: flex;
     background-image: url('https://mk0hellobestowjm6762.kinstacdn.com/wp-content/uploads/2019/03/bestow-hero-mockup.1a.jpg');
-    height: 380px;
+    height: 410px;
     background-size: cover;
 }
 
@@ -11,10 +11,13 @@
     height: 232px;
     padding-left: 20px;
     padding-top: 20px;
-    background-color: white;
+    background-color: #A4CCD5;
     margin-top: 62px;
     margin-left: 10px;
     border-radius: 5px;
+    font-family: 'Big Shoulders Text', cursive;
+    height: 267px;
+    text-shadow: 1px 1px white;
 }
 
 .profile-info img {
@@ -31,4 +34,32 @@
 
 .profile-info h2 {
     font-size: 20px;
+}
+
+.profile-info button {
+    height: 40px;
+    width: 130px;
+    font-size: 19px;
+    margin-left: 123px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-family: 'Big Shoulders Text', cursive;
+    cursor: pointer;
+    outline: none;
+    background-color: #E6E6E6;
+    text-shadow: 1px 1px white;
+}
+
+.profile-info button:hover {
+    height: 40px;
+    width: 130px;
+    font-size: 19px;
+    margin-left: 123px;
+    border: 2px solid black;
+    font-family: 'Big Shoulders Text', cursive;
+    cursor: pointer;
+    outline: none;
+    background-color: #FCC024;
+    color: white;
+    text-shadow: 1px 1px black;
 }
