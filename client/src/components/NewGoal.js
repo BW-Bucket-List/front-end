@@ -8,7 +8,7 @@ import NewGoalCard from "./NewGoalCard"
 const NewGoal = (status, errors, values) =>{
     
     
-    const [goal, setGoal] = useState([]);
+    //const [goal, setGoal] = useState([]);
 
     // const changeHandler = event =>{
     //     setGoal({...goal, [event.target.name]})
@@ -21,9 +21,9 @@ const NewGoal = (status, errors, values) =>{
     // }, [status]);
 
     return(
-        <div className="ui container">
-            <h2>Add New Goal</h2>
-            <Form className="ui form">
+        <div className="newGoal">
+            <h2 className="goalHeader">Add New Goal</h2>
+            <Form className="form">
                 <Field type="text" className="field" name="goal" placeholder="Your goal goes here..."/>
                 {errors.name && (<p className="error">{errors.goal}</p>)}
                 <Field component="select" className="field" name="category">
@@ -38,18 +38,23 @@ const NewGoal = (status, errors, values) =>{
                 </Field>
                 <Field type="text" className="field" name="location" placeholder="Location"/>
                 <Field type="text" className="field" name="date" placeholder="Date"/>
-                <Field component="textarea" type="text" name="description" placeholder="Goal description"/>
-                <label>Make Private<Field type="checkbox" name="isPrivate"/></label>
-                <button>Submit</button>
-                <button>Cancel</button>
+                <Field component="textarea" type="text" className="goalDesc" name="description" placeholder="Goal description"/><br/>
+                <div className="text">
+                    
+                    <label>Make Private<Field type="checkbox" name="isPrivate"/></label>
+                    <div className="goalBtn">
+                        <button className="submitBtn">Submit</button>
+                        <button className="cancelBtn">Cancel</button>
+                    </div>
+                </div>
 
-                <div className="Container">
+                {/* <div className="Container">
                     <div className="row">
                         {goal.map((item,i)=>{
                             return <div key={item.id} name={item.goal} category={item.goal} location={item.location} date={item.date} description={item.description} />
                         })}
                     </div>
-                </div>
+                </div> */}
                 
             </Form>
         </div>
