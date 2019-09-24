@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 import {Link} from 'react-router-dom';
+import LoginPic from '../Images/LoginPic.jpg';
 
 const Register = (props) =>{
   const [credentials, setCredentials] = useState({
@@ -28,40 +29,47 @@ const Register = (props) =>{
   }
 
   return(
-    <div className="registerPage">
+    <div className="loginPage">
       <h1>Register</h1>
-      <form onSubmit={handleSubmit} className="registerForm">
-      <input
-          type="text"
-          name="name"
-          onChange={handleChange}
-          value={credentials.name}
-          placeholder="Name"
-        />
-        <input
-          type="email"
-          name="email"
-          onChange={handleChange}
-          value={credentials.email}
-          placeholder="Email"
-        />
-        <input
-          type="text"
-          name="username"
-          onChange={handleChange}
-          value={credentials.username}
-          placeholder="Username"
-        />
-        <input
-          type="password"
-          name="password"
-          onChange={handleChange}
-          value={credentials.password}
-          placeholder="Password"
-        />
-        <button>Register</button>
-      </form>
-      <p>Already have an account?{' '}<Link to=''>click here!</Link></p>
+      <div className='mainContent'>
+        <div className='leftContent'>
+          <form onSubmit={handleSubmit} className="loginForm">
+            <input
+              type="text"
+              name="name"
+              onChange={handleChange}
+              value={credentials.name}
+              placeholder="Name"
+            />
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              value={credentials.email}
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              name="username"
+              onChange={handleChange}
+              value={credentials.username}
+              placeholder="Username"
+            />
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              value={credentials.password}
+              placeholder="Password"
+            />
+            <button>Register</button>
+          </form>
+          <p>Already have an account?{' '}<Link to='' className='link'>click here!</Link></p>
+        </div>
+        <div className='rightContent'>
+          <img src={LoginPic} alt='Assorted items on a wooden table' className='loginPageImg' />
+        </div>
+      </div>
     </div>
   )
 }
