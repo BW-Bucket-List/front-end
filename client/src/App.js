@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.scss';
+// import './scss/App.scss';
 import {Route, Link} from 'react-router-dom';
 
 import Login from './components/Login';
