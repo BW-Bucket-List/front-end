@@ -1,6 +1,5 @@
 import React from 'react';
-import './ProfilePage.css';
-import { Link } from 'react-router-dom';
+import '../../scss/ProfilePage.scss'
 
 function ProfilePage() {
     return (
