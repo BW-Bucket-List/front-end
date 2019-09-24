@@ -64,7 +64,6 @@
     font-size: 18px;
 }
 
-
 /**//**//**//**//**//**//**//**//**/
 
 .middle-section-profile {
@@ -117,4 +116,27 @@
     color: black;
     margin-left: 20px;
     margin-bottom: 42px;
+}
+
+/**//**//**//**//**//**//**//**//**/
+
+.bottom-section-profile {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px !important;
+    margin: 0 80px;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 333px;
+    height: 170px;
+    text-align: center;
+    padding: 30px;
+}
+
+.box1 i {
+    font-size: 30px;
 }

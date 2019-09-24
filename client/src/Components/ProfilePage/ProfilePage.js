@@ -37,6 +37,25 @@ function ProfilePage() {
                     </div>
               </div> {/* middle-section-profile2 end */}
 
+              <div className='bottom-section-profile'>
+                    <div className='box1'>
+                        <i class="fas fa-plane"></i>
+                        <h2>Vacation Planning</h2>
+                        <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                    </div>
+                    <div className='box1'>
+                        <i class="fas fa-home"></i>
+                        <h2>Vacation Planning</h2>
+                        <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                    </div>
+                    <div className='box1'>
+                        <i class="far fa-smile"></i>
+                        <h2>Vacation Planning</h2>
+                        <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                    </div>
+                    
+              </div> {/* bottom-section-profile end */}
+
         </div> /* profile-page-section end */
     )
 }
