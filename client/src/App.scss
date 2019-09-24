@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
+
 html{
   height: 100%;
 }
@@ -28,24 +30,25 @@ code {
   flex-direction: column;
   align-items: center;
   background-color: #a4ccd5; 
+  font-family: 'Merienda One', cursive;
 
   h1{
     font-size: 4rem;
     margin: 5%;
-    color: white;
-    text-shadow: 1.5px 1.5px #232222;
+    color: #74898a;
+    text-shadow: 1.5px 1.5px #fcc024;
   }
 }
 
 .mainContent{
-  background-color: white;
+  background-color: #e6e6e6;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
   padding: 0px;
-  box-shadow: 0 0 3px 3px #232222;
+  box-shadow: 0 0 3px 3px #74898a;
 
 
   .leftContent{
@@ -70,15 +73,18 @@ code {
         border-radius: 10px;
         border: none;
         align-self: center;
-        background-color: #232222;
-        color: #a4ccd5;
+        background-color: #fcc024;
+        color: #74898a;
         font-size: 1rem;
         font-weight: bold;
+        font-family: 'Merienda One', cursive;
+        box-shadow: 0 0 3px 3px #74898a;
+
       }
 
       button:hover{
-        background-color: #a4ccd5;
-        color: #232222;
+        background-color: #74898a;
+        color: #fcc024;
       }
     }
 
@@ -87,9 +93,14 @@ code {
       text-align: center;
 
       .link{
-        color: #a4ccd5;
+        color: #74898a;
         font-weight: bold;
         text-shadow: .3px .3px #232222;
+        font-size: 1.3rem;
+      }
+
+      .link:hover{
+        color: #fcc024;
       }
     }
   }
