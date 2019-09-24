@@ -48,7 +48,7 @@ const Login = (props) =>{
             />
             <button>Login</button>
           </form>
-          <p>Don't have an account?{' '}<Link to=''className='link'>click here!</Link></p>
+          <p>Don't have an account?{' '}<Link to='/register'className='link'>click here!</Link></p>
         </div>
         <div className='rightContent'>
           <img src={LoginPic} alt="Assorted items on wooden table" className="loginPageImg"/>

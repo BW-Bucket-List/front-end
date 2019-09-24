@@ -64,7 +64,7 @@ const Register = (props) =>{
             />
             <button>Register</button>
           </form>
-          <p>Already have an account?{' '}<Link to='' className='link'>click here!</Link></p>
+          <p>Already have an account?{' '}<Link to='/login' className='link'>click here!</Link></p>
         </div>
         <div className='rightContent'>
           <img src={LoginPic} alt='Assorted items on a wooden table' className='loginPageImg' />
