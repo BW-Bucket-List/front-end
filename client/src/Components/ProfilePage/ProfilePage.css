@@ -7,17 +7,14 @@
 
 .profile-info {
     border: 1px solid black;
-    width: 400px;
-    height: 232px;
-    padding-left: 20px;
-    padding-top: 20px;
+    width: 384px;
     background-color: #A4CCD5;
     margin-top: 62px;
-    margin-left: 10px;
     border-radius: 5px;
     font-family: 'Big Shoulders Text', cursive;
-    height: 267px;
+    height: 337px;
     text-shadow: 1px 1px white;
+    text-align: center;
 }
 
 .profile-info img {
@@ -29,7 +26,7 @@
 }
 
 .profile-info h1 {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .profile-info h2 {
@@ -40,7 +37,6 @@
     height: 40px;
     width: 130px;
     font-size: 19px;
-    margin-left: 123px;
     border-radius: 5px;
     border: 2px solid black;
     font-family: 'Big Shoulders Text', cursive;
@@ -62,4 +58,8 @@
     background-color: #FCC024;
     color: white;
     text-shadow: 1px 1px black;
+}
+
+.profile-info span {
+    font-size: 18px;
 }
