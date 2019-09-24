@@ -1,11 +1,7 @@
 import React from 'react';
 import '../scss/ProfilePage.scss'
-<<<<<<< HEAD
-import { Link } from 'react-router-dom'
-=======
 import { Link } from 'react-router-dom';
 
->>>>>>> cdd3ef80f07175f6bad35303f2fbc79a83d92b9f
 
 function ProfilePage() {
     return (
