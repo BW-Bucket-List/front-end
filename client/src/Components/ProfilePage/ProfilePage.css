@@ -8,18 +8,19 @@
 .profile-info {
     border: 1px solid black;
     width: 384px;
-    background-color: #A4CCD5;
-    margin-top: 62px;
+    background-color: #74898A;
+    margin-top: 32px;
     border-radius: 5px;
     font-family: 'Big Shoulders Text', cursive;
-    height: 337px;
-    text-shadow: 1px 1px white;
+    height: 354px;
+    text-shadow: 1px 1px black;
     text-align: center;
+    color: white;
 }
 
 .profile-info img {
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     border: 2px solid black;
     border-radius: 5rem;
     margin-top: 5px;
@@ -50,7 +51,6 @@
     height: 40px;
     width: 130px;
     font-size: 19px;
-    margin-left: 123px;
     border: 2px solid black;
     font-family: 'Big Shoulders Text', cursive;
     cursor: pointer;
@@ -62,4 +62,59 @@
 
 .profile-info span {
     font-size: 18px;
+}
+
+
+/**//**//**//**//**//**//**//**//**/
+
+.middle-section-profile {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 155px;
+}
+
+.middle-section-profile img {
+    height: 270px;
+    width: 420px;
+    border: 1px solid black;
+}
+
+.middle-section-text p {
+    border: 1px solid black;
+    height: 188px;
+    width: 520px;
+    margin-top: 0;
+    padding-top: 82px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+
+.middle-section-profile2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 155px;
+    background-color: #A4CCD5;
+}
+
+.middle-section-profile2 img {
+    height: 270px;
+    width: 420px;
+    border: 1px solid black;
+    margin-top: 38px;
+    margin-right: 20px;
+}
+
+.middle-section-text2 p {
+    border: 1px solid black;
+    height: 188px;
+    width: 520px;
+    margin-top: 38px;
+    padding-top: 82px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: white;
+    color: black;
+    margin-left: 20px;
+    margin-bottom: 42px;
 }
