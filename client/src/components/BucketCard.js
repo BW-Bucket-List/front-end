@@ -4,6 +4,7 @@ import 'semantic-ui-css/semantic.min.css';
 import '../scss/BucketCard.scss';
 import loginPic from '../Images/LoginPic.jpg';
 import Items from '../components/Items';
+import {Link} from 'react-router-dom';
 
 //import LoginPic from '../Images/LoginPic.jpg';
 
@@ -20,7 +21,7 @@ function BucketCard (props) {
             <Card.Description>{'isPrivate: ' + isPrivate}</Card.Description>
         </Card.Content>
         <Card.Content extra>
-            <button>View Items</button>
+            <button><Link to='/items'>Open the List!</Link></button>
         </Card.Content>
         </Card>
     )
