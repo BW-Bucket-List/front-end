@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../scss/ProfilePage.scss'
+import '../scss/ProfilePage.scss'
 
 function ProfilePage() {
     return (

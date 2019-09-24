@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import './App.scss';
-// import './scss/App.scss';
+import './scss/App.scss';
 import {Route, Link} from 'react-router-dom';
+import PrivateRoute from './components/PrivateRoute'
 
 import Login from './components/Login';
 import Register from './components/Register';
@@ -33,8 +33,8 @@ function App() {
         <Route exact path= '/' component={Login} />
         <Route path= '/login' component={Login} />
         <Route path= '/register' component={Register} />
-        <Route path= '/profile' component={ProfilePage} />
-        <Route path= '/buckets' render={props => {
+        <PrivateRoute path= '/profile' component={ProfilePage} />
+        <PrivateRoute path= '/buckets' render={props => {
           return (
             <BucketList {...props} 
             bucketLists={bucketLists}
