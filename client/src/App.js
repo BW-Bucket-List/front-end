@@ -8,6 +8,7 @@ import Register from './components/Register';
 import ProfilePage from './components/ProfilePage';
 import NavBar from './components/NavBar';
 import BucketList from './components/BucketList';
+import Items from './components/Items';
 
 const testdata = [
   {id: '1',
@@ -34,12 +35,19 @@ function App() {
         <Route path= '/login' component={Login} />
         <Route path= '/register' component={Register} />
         <PrivateRoute path= '/profile' component={ProfilePage} />
-        <PrivateRoute path= '/buckets' render={props => {
+        <Route path= '/buckets' render={props => {
           return (
             <BucketList {...props} 
             bucketLists={bucketLists}
             setBucketLists={setBucketLists}
             setServerError={setServerError}/>
+          )
+        }}/>
+        <Route path= '/items' render={props => {
+          return (
+            <Items {...props} 
+            items={[{name: 'barcelona', location: 'spain', description: 'something', entries: ['a','b'], photos: ['c','d']}]}
+            />
           )
         }}/>
 
