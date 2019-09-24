@@ -1,31 +1,30 @@
-import React from 'react';
-import {Modal, Button } from "semantic-ui-react";
+import React from "react";
+import '../scss/Items.scss'
 
-function Items (props){
-    const {entries, photos, videos, voices} = props;
-    return (
-        <Modal
-            trigger={
-            <Button color="grey" className="neutral">
-                View Items
-            </Button>
+const Items = props =>{
+    
+    return(
+        <div>
+            {
+                props.items.map( item => (
+                    <div key={item.id} className='item'>
+                        <div>
+                            <div>
+                                <h2>{item.name}</h2>
+                                <p>{item.location}</p>
+                                <p>{item.description}</p>
+                                <div>{item.entries.map(entry => (
+                                    <p>{entry}</p>
+                                ))}</div>
+                                <div>{item.photos.map(photo => (
+                                    <p>{photo}</p>
+                                ))}</div>                                  
+                            </div>
+                        </div>
+                    </div>
+                ))
             }
-        >
-            <Modal.Header>BucketList Items</Modal.Header>
-            {/* <img className="book-img" src={''} alt="" /> */}
-            {entries.map((entry) => (
-                <p>{entry}</p>
-            ))}
-            {photos.map((photo) => (
-                <p>{photo}</p>
-            ))}
-            {videos.map((video) => (
-                <p>{video}</p>
-            ))}
-            {voices.map((voice) => (
-                <p>{voice}</p>
-            ))}
-        </Modal>
+        </div>
     )
 }
 
