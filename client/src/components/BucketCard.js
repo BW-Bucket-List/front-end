@@ -3,6 +3,7 @@ import { Card, Image, Modal, Button } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css';
 import '../scss/BucketCard.scss';
 import loginPic from '../Images/LoginPic.jpg';
+import Items from '../components/Items';
 
 //import LoginPic from '../Images/LoginPic.jpg';
 
@@ -18,9 +19,12 @@ function BucketCard (props) {
             <Card.Meta></Card.Meta>
             <Card.Description>{'isPrivate: ' + isPrivate}</Card.Description>
         </Card.Content>
-        {/* <Card.Content extra>
-            <BookingButton land={props.land} />
-        </Card.Content> */}
+        <Card.Content extra>
+            <Items entries={[]}
+            voices={['a','b','c']}
+            photos={['aa', 'bb', 'cc']}
+            videos={['aaa', 'bbb', 'ccc']}/>
+        </Card.Content>
         </Card>
     )
 }

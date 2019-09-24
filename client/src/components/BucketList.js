@@ -26,7 +26,8 @@ function BucketList (props) {
         <section className='bucket-list'>
             {bucketLists?
             bucketLists.map(bucket => (
-                <BucketCard 
+                <BucketCard
+                key={bucket.id} 
                 name={bucket.name}
                 isPrivate={bucket.isPrivate}/>
             ))
