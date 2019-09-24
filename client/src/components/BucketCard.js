@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, Image, Modal, Button } from "semantic-ui-react";
-import 'semantic-ui-css/semantic.min.css';
+import { Card, Image, Modal, Button } from 'semantic-ui-react';
+// import 'semantic-ui-css/semantic.min.css';
 import '../scss/BucketCard.scss';
 import loginPic from '../Images/LoginPic.jpg';
 import Items from '../components/Items';
