@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import BucketCard from './BucketCard';
+import '../scss/BucketList.scss';
 
 function BucketList (props) {
     // bucketList, setServerError state to be passed down as props
@@ -22,7 +23,7 @@ function BucketList (props) {
     },[])
 
     return (
-        <div>
+        <section className='bucket-list'>
             {bucketLists?
             bucketLists.map(bucket => (
                 <BucketCard 
@@ -30,7 +31,7 @@ function BucketList (props) {
                 isPrivate={bucket.isPrivate}/>
             ))
             : null }
-        </div>
+        </section>
     );
 }
 
