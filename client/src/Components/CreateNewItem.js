@@ -30,7 +30,9 @@ const CreateNewItem = (status, errors, values) =>{
     return(
         // Form for New Goal
         <div className="newGoal">
-            <h2 className="goalHeader">Add New Goal</h2>
+            <div className="goalHeader">
+                <h2>Add New Goal</h2>
+            </div>
             
             <Form className="form" >
                 {/* onSubmit={submitHandler}> */}
@@ -41,21 +43,6 @@ const CreateNewItem = (status, errors, values) =>{
                 onChange={changeHandler} 
                 value={goal.goal}/>
                 {errors.name && (<p className="error">{errors.goal}</p>)}
-                
-                <Field component="select" 
-                className="field" 
-                name="category"
-                onChange={changeHandler} 
-                value={goal.category}>
-                    <option className="selectPlaceholder">Select a category</option>
-                    <option>DIY Project</option>
-                    <option>Entertainment</option>
-                    <option>Food</option>
-                    <option>Health</option>
-                    <option>Life Milestone</option>
-                    <option>Learn New Skill</option>
-                    <option>Travel</option>
-                </Field>
 
                 <Field type="text" 
                 className="field" 
@@ -82,14 +69,14 @@ const CreateNewItem = (status, errors, values) =>{
                 value={goal.description}
                 /><br/>
                 
-                <div className="text">
+                
                     
                     {/* <label>Make Private<Field type="checkbox" name="isPrivate"/></label> */}
                     <div className="goalBtn">
                         <button className="submitBtn">Submit</button>
                         <button className="cancelBtn">Cancel</button>
                     </div>
-                </div>
+                
 
                 {/* Displays submitted form */}
                 {/* <div className="Container">
