@@ -1,7 +1,7 @@
 .top-section-profile {
     display: flex;
     background-image: url('https://mk0hellobestowjm6762.kinstacdn.com/wp-content/uploads/2019/03/bestow-hero-mockup.1a.jpg');
-    height: 380px;
+    height: 410px;
     background-size: cover;
 }
 
@@ -20,17 +20,131 @@
 }
 
 .profile-info img {
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     border: 2px solid black;
     border-radius: 5rem;
     margin-top: 5px;
 }
 
 .profile-info h1 {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .profile-info h2 {
     font-size: 20px;
+}
+
+.profile-info button {
+    height: 40px;
+    width: 95px;
+    font-size: 19px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-family: 'Big Shoulders Text', cursive;
+    cursor: pointer;
+    outline: none;
+    background-color: #E6E6E6;
+    text-shadow: 1px 1px white;
+}
+
+.profile-info button:hover {
+    height: 40px;
+    width: 130px;
+    font-size: 19px;
+    border: 2px solid black;
+    font-family: 'Big Shoulders Text', cursive;
+    cursor: pointer;
+    outline: none;
+    background-color: #FCC024;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.profile-info span {
+    font-size: 18px;
+}
+
+.profile-info p {
+    font-size: 17px;
+}
+
+/**//**//**//**//**//**//**//**//**/
+
+.middle-section-profile {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 155px;
+}
+
+.middle-section-profile img {
+    height: 270px;
+    width: 420px;
+    border: 1px solid black;
+}
+
+.middle-section-text p {
+    border: 1px solid black;
+    height: 188px;
+    width: 520px;
+    margin-top: 0;
+    padding-top: 82px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.middle-section-profile2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 155px;
+    background-color: #A4CCD5;
+}
+
+.middle-section-profile2 img {
+    height: 270px;
+    width: 420px;
+    border: 1px solid black;
+    margin-top: 38px;
+    margin-right: 20px;
+}
+
+.middle-section-text2 p {
+    border: 1px solid black;
+    height: 188px;
+    width: 520px;
+    margin-top: 38px;
+    padding-top: 82px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: white;
+    color: black;
+    margin-left: 20px;
+    margin-bottom: 42px;
+    font-size: 18px;
+}
+
+/**//**//**//**//**//**//**//**//**/
+
+.bottom-section-profile {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px !important;
+    margin: 0 80px;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 333px;
+    height: 170px;
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+}
+
+.box1 i {
+    font-size: 30px;
 }

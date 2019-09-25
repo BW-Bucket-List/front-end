@@ -12,9 +12,9 @@ function NavBar() {
                 </div>
               
                 <div className='right-side-link'>
-                  <Link to='/'>Home</Link>
-                  <a href='#'>Your Bucket</a>
-                  <a href='#'>About</a>
+                  <Link to='/'>Login</Link>
+                  <Link to='/profile'>Profile</Link>
+                  <Link to='/buckets'>My Buckets</Link>
                 </div>
 
               </div> {/* nav-links end */}

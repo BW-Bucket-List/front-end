@@ -29,8 +29,6 @@ function App() {
   return (
     <div className="App">
       <div className='routes'>
-        <Route path= '/' component={NavBar} />
-        {serverError}
         <Route exact path= '/' component={Login} />
         <Route path= '/login' component={Login} />
         <Route path= '/register' component={Register} />
