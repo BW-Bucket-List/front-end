@@ -75,12 +75,12 @@ const CreateNewItem = (errors, values, touched) =>{
                 
                     
                     {/* <label>Make Private<Field type="checkbox" name="isPrivate"/></label> */}
-                    {/* <div className="goalBtn">
-                        <button className="submitBtn">Submit</button>
-                        <button className="cancelBtn">Cancel</button>
-                    </div> */}
+                    <div className="goalBtn">
+                        <button className="submitBtn">Save</button>
+                        {/* <button className="cancelBtn">Cancel</button> */}
+                    </div>
 
-                <Button color="#e6e6e6" type="submit">Save</Button>
+                {/* <Button color="#e6e6e6" type="submit" className="saveBtn">Save</Button> */}
                 
 
                 {/* Displays submitted form */}
