@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
 
+*{
+    
+    border: 1px red solid;
+}
+
 .nav-links {
     display: flex;
     justify-content: space-between;
@@ -7,13 +12,17 @@
     width: 100%;
     padding: 1.5rem;
     background-color: #74898A;
-    color: #232222;
+    
+}
+
+.left-side-link{
+    width: 50%;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: black;
     font-family: 'Big Shoulders Text', cursive;
+    color: #232222;
 }
 
 .nav-links .left-side-link a {
@@ -25,9 +34,8 @@
 .nav-links .right-side-link a {
     justify-content: space-between;
     margin: 30px;
-    font-size: 20px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #e6e6e6;
 }
 
-// #bucket-list {
-//     padding-right: 50px;
-// }
