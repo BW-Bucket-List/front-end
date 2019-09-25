@@ -37,14 +37,14 @@ const CreateNewItem = (status, errors, values) =>{
                 <Field type="text" 
                 className="field" 
                 name="goal" 
-                placeholder="Your goal goes here..." 
+                placeholder="Your goal goes here..."
                 onChange={changeHandler} 
                 value={goal.goal}/>
                 {errors.name && (<p className="error">{errors.goal}</p>)}
                 
                 <Field component="select" 
                 className="field" 
-                name="category" 
+                name="category"
                 onChange={changeHandler} 
                 value={goal.category}>
                     <option className="selectPlaceholder">Select a category</option>
@@ -62,14 +62,16 @@ const CreateNewItem = (status, errors, values) =>{
                 name="location" 
                 placeholder="Location" 
                 onChange={changeHandler} 
-                value={goal.location}/>
+                value={goal.location}
+                />
                 
                 <Field type="text" 
                 className="field" 
                 name="date" 
                 placeholder="Date" 
                 onChange={changeHandler} 
-                value={goal.date}/>
+                value={goal.date}
+                />
                 
                 <Field component="textarea" 
                 type="text" 
@@ -77,7 +79,8 @@ const CreateNewItem = (status, errors, values) =>{
                 name="description" 
                 placeholder="Goal description" 
                 onChange={changeHandler} 
-                value={goal.description}/><br/>
+                value={goal.description}
+                /><br/>
                 
                 <div className="text">
                     
@@ -89,7 +92,7 @@ const CreateNewItem = (status, errors, values) =>{
                 </div>
 
                 {/* Displays submitted form */}
-                <div className="Container">
+                {/* <div className="Container">
                     <div className="row">
                         {goal.map((item,i)=>{
                             return <div key={item.id} 
@@ -100,7 +103,7 @@ const CreateNewItem = (status, errors, values) =>{
                             description={item.description} />
                         })}
                     </div>
-                </div>
+                </div> */}
                 
             </Form>
         </div>

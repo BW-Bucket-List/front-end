@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './scss/App.scss';
 import {Route, Link} from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute'
-
+import CreateNewItem from "./components/CreateNewItem"
 import Login from './components/Login';
 import Register from './components/Register';
 import ProfilePage from './components/ProfilePage';
@@ -50,8 +50,8 @@ function App() {
             />
           )
         }}/>
-
-        <Route path="/items/newitem" component={} />
+        
+        <Route path="/items/newitem" component={CreateNewItem} />
       </div>
 
     </div>
