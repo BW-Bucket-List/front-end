@@ -7,7 +7,7 @@ function Footer() {
                 <div className='footer-Section'>
 
                   <div className='copyright'>
-                        <p>Copyright © 2019, Bucket List. All Rights Reserved.</p>
+                        <p>Bucket List Copyrights 2019</p>
                   </div>
                   
             </div> /* footer-Section end */
