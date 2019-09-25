@@ -1,4 +1,4 @@
-import {LOGIN_USER_START, LOGIN_USER_SUCCESS, LOGIN_USER_FAILURE} from '../actions';
+import {LOGIN_USER_START, LOGIN_USER_SUCCESS, REGISTER_USER_START, REGISTER_USER_SUCCESS} from '../actions';
 
 const initialState = {
   name: null,
@@ -23,7 +23,21 @@ export const reducer = (state = initialState, action) =>{
         isAuth: true,
         isFetching: false
       };
+    case REGISTER_USER_START:
+      return{
+        ...state,
+        isFetching: true,
+        error: ''
+      };
+    case REGISTER_USER_SUCCESS:
+      console.log(action.payload, 'hello from register');
+      return{
+        ...state,
+        isAuth: true,
+        isFetching: false
+      }
     default: 
       return state;
   }
+
 };

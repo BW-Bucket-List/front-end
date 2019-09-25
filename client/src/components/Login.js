@@ -59,7 +59,7 @@ const Login = (props) =>{
 }
 
 const mapStateToProps = state =>{
-  console.log('mSTP', state);
+  console.log('mSTP login', state);
   return{
 
   }
