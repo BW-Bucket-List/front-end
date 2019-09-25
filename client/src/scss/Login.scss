@@ -1,0 +1,85 @@
+.logIn-div {  /* main div */
+    border: 1px solid black;
+    margin: 50px 400px;
+    background-color: #6E9A64;
+    text-shadow: 1px 1px black;
+    background-image: url('')
+}
+
+
+.logIn-form {  /* form div ... the whole form tag */
+    height: 335px;
+    border-top: 2px solid lightgray;
+}
+
+.logIn-div input { 
+    height: 50px;
+    font-size: 18px;
+    border: 1px solid #6E9A64;
+    outline: none;
+    margin-left: 23px;
+    color: white;
+}
+
+.access-logIn-inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 0 33px;
+}
+
+.access-logIn-inputs input {
+    width: 564px;
+    padding-bottom: 20px;
+}  
+
+::-webkit-input-placeholder { 
+    padding-left: 15px !important;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px black;
+    color: white;
+  }
+
+.logIn-button {  /* signUp button style */
+    background-color: #4B91D9;
+    height: 50px;
+    width: 170px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-left: 232px;
+}
+
+.button-div2 {  /* button div on sign up button */
+    margin-top: 30px;
+    /* padding-right: 421px; */
+}
+
+.logIn-div h1 {  /* top h1 text style */
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.logIn-div p {  /* top paragraph text style */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.a-tag-logIn {
+    color: #358FEB;
+    cursor: pointer;
+}
+
+.logIn-input {
+    padding-top: 34px;
+    background-color: #6E9A64;
+}
+
+.none-user {
+    margin-top: 20px
+}

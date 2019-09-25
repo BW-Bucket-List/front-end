@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 import {Link} from 'react-router-dom';
 import LoginPic from '../Images/LoginPic.jpg';
+import '../scss/Login.scss';
 
 const Login = (props) =>{
   const [credentials, setCredentials] = useState({
@@ -27,35 +28,35 @@ const Login = (props) =>{
   }
 
   return(
-    <div className="loginPage">
-      <h1>Welcome to Bucket List!</h1>
-      <h2>Login</h2>
-      <div className='mainContent'>
-        <div className='leftContent'>
-          <form onSubmit={handleSubmit} className="loginForm">
-            <input
-              type="text"
-              name="username"
-              onChange={handleChange}
-              value={credentials.username}
-              placeholder="Username"
-            />
-            <input
-              type="password"
-              name="password"
-              onChange={handleChange}
-              value={credentials.password}
-              placeholder="Password"
-            />
-            <button>Login</button>
-          </form>
-          <p>Don't have an account?{' '}<Link to='/register'className='link'>click here!</Link></p>
-        </div>
-        <div className='rightContent'>
-          <img src={LoginPic} alt="Assorted items on wooden table" className="loginPageImg"/>
-        </div>
-      </div>
-    </div>
+    <div className='logIn-div'>
+
+                <h1>Log In</h1>
+                <p>Please fill in this form to log into account!</p>
+
+                <form onSubmit={handleSubmit}  className='logIn-form'>
+
+                    <div className='access-logIn-inputs'>
+                        <div className='username'>
+                            <i class="fas fa-user"></i>
+                            <input className='logIn-input' type='name' onChange={handleChange} name='userName' value={credentials.username} placeholder='Username'></input>
+                         </div>
+                         <div className='password'>
+                            <i class="fas fa-lock"></i>
+                            <input className='logIn-input' type='password' onChange={handleChange} value={credentials.password} name='password' placeholder='Password'></input>
+                        </div>
+                    </div> {/* access-logIn-inputs end */}
+
+                    <div className='none-user'>
+                        <p>Not registered?{' '}<Link to='/register' className='a-tag-logIn' src='#'>Sign up here.</Link></p>
+                    </div>
+
+                    <div className='button-div2'>
+                        <button className='signUp-button'>Log In</button>
+                    </div>
+
+                </form> {/* logIn-form end */}
+
+        </div> /* logIn-div end */
   )
 }
 

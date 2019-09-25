@@ -1,0 +1,145 @@
+.signUp-div {  /* main div */
+    border: 1px solid black;
+    margin: 50px 400px;
+    background-color: #6E9A64;
+    text-shadow: 1px 1px black;
+}
+
+
+.signUp-form {  /* form div ... the whole form tag */
+    height: 435px;
+    border-top: 2px solid lightgray;
+    background-color: #6E9A64;
+}
+
+.signUp-div input { 
+    height: 50px;
+    font-size: 18px;
+    border: 1px solid #6E9A64;
+    outline: none;
+    margin-left: 23px;
+    color: white;
+}
+
+.access-inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 0 33px;
+}
+
+.access-inputs input {
+    width: 564px;
+    padding-bottom: 20px;
+
+}  
+
+::-webkit-input-placeholder { /* placeHolder style */
+    padding-left: 15px !important;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    color: white;
+    
+  }
+
+.signUp-button {  /* signUp button style */
+    background-color: #60C847;
+    height: 50px;
+    width: 170px;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-weight: bolder;
+    margin-left: 232px;
+}
+
+.signUp-button:hover {
+    background-color: white;
+    color: #60C847;
+    text-shadow: 1px 1px black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    border: 2px solid #3E6D93;
+    margin-left: 232px;
+}
+
+.button-div {  /* button div on sign up button */
+    margin-top: 30px;
+    /* padding-right: 421px; */
+}
+
+.signUp-div h1 {  /* top h1 text style */
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.signUp-div p {  /* top paragraph text style */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.a-tag-logIn {
+    color: white !important;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.email{
+    display: flex;
+    border-bottom: 1px solid white;
+    padding-top: 30px;
+}
+
+.username {
+    display: flex;
+    border-bottom: 1px solid white;
+    padding-top: 30px;
+}
+
+.password {
+    display: flex;
+    border-bottom: 1px solid white;
+    padding-top: 30px;
+}
+
+.email i {
+    color: white;
+    font-size: 20px; 
+    margin-top: 48px;
+    padding-left: 23px;
+    text-shadow: 1px 1px black;
+    margin-top: 26px;
+}
+
+.username i {
+    color: white;
+    font-size: 20px; 
+    margin-top: 48px;
+    padding-left: 23px;
+    text-shadow: 1px 1px black;
+    margin-top: 26px;
+}
+
+.password i {
+    color: white;
+    font-size: 20px; 
+    margin-top: 48px;
+    padding-left: 23px;
+    text-shadow: 1px 1px black;
+    margin-top: 26px;
+}
+
+.signUp-input {
+    padding-top: 34px;
+    background-color: #6E9A64;
+}
+
+.prev-user {
+    margin-top: 20px
+}
