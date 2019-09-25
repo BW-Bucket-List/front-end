@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {withFormik, Form, Field} from "formik";
 import * as Yup from "yup";
 import "../scss/CreateNewItem.scss"
-import {Button} from "semantic-ui-react"
+import {Button, Modal} from "semantic-ui-react"
 
 
 const CreateNewItem = (errors, values, touched) =>{
@@ -29,7 +29,13 @@ const CreateNewItem = (errors, values, touched) =>{
     // }, [status]);
 
     return(
-        // Form for New Goal
+        <Modal trigger={
+            <Button color="gray" className="neutral">
+            Create New Goal
+            </Button>
+        }>
+        {/* // Form for New Goal */}
+        <Modal.Content>
         <div className="newGoal">
             <div className="goalHeader">
                 <h2>Add New Goal</h2>
@@ -93,6 +99,8 @@ const CreateNewItem = (errors, values, touched) =>{
                  */}
             </Form>
         </div>
+        </Modal.Content>
+        </Modal>
     )
 }
 
