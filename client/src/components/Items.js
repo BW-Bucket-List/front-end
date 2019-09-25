@@ -1,8 +1,9 @@
 import React from "react";
 import { Card } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
-import '../scss/Items.scss'
-import { Link } from "react-router-dom"
+import '../scss/Items.scss';
+import { Link } from "react-router-dom";
+import EditItem from './EditItem';
 
 const Items = props => {
 
@@ -40,7 +41,8 @@ const Items = props => {
                                 </ul>
                             </Card.Content>
                             <Card.Content extra className='buttons'>
-                                <button><Link to='items/newitem'>Edit</Link></button>
+                                {/* <button><Link to='items/newitem'>Edit</Link></button> */}
+                                <EditItem />
                                 <button><Link to='#'>Mark Complete</Link></button>
                                 <button><Link to='#'>Delete</Link></button>
                             </Card.Content>
