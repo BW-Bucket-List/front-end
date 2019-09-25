@@ -1,5 +1,63 @@
-.item {
-    border: 1px solid black;
-    margin: 30px;
-    width: 25vw;
+.item-page {
+    background-color: #a4ccd5;
+    height: 100vh;
+
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 30px;
+    }
+
+    .create-item {
+        float: right;
+        margin: 10px;
+    }
+}
+
+.item.ui.card {
+    border: 2px solid black;
+    margin: 20px;
+    height: auto;
+    color: blue;
+    background: #e5e5e5;
+    box-shadow: 5px 1px 20px #111;
+    font-size: 1.1rem;
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .extra {
+        color: black;
+        &.buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    ul {
+        padding: 0 20px;
+        margin: 0;
+    }
+
+    button{
+        margin: 2%;
+        padding: 3%;
+        min-width: 60px;
+        border-radius: 10px;
+        border: none;
+        align-self: center;
+        background-color: #fcc024;
+        color: #74898a;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: 'Merienda One', cursive;
+        box-shadow: 0 0 3px 3px #74898a;
+      
+      }
+      
+      button:hover{
+        background-color: #74898a;
+        color: #fcc024;
+      }
 }
