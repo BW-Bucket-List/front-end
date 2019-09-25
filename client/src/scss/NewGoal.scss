@@ -1,0 +1,43 @@
+.newGoal{
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 2px solid #fcc024;
+  background-color: #ffffff;
+  color: #232222;
+  
+  .goalHeader{
+      font-size: 14px;
+  }
+
+  .field{
+    width: 80%;
+    height: 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #232222;
+    border-radius: 5px;
+    padding-left: 5px;
+
+    .goalDesc{
+        width: 80%;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+  }
+
+    .goalBtn{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+    
+        width: 50%;
+        .submitBtn, .cancelBtn{
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            margin-left: 10px;
+            padding: 7px 25px;
+        }
+    }
+
+}
