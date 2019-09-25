@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 //import {createStore, applyMiddleware} from 'redux';
 import './scss/App.scss';
-import {Provider} from 'react-redux';
+//import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 // import {reducer} from './reducers';
 
@@ -30,7 +30,7 @@ ReactDOM.render(
     </Router>
   /* </Provider> */,
   // </Provider>
-  ,
+  
  document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
