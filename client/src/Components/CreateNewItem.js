@@ -1,19 +1,20 @@
 import React, {useState} from "react";
 import {withFormik, Form, Field} from "formik";
-//import * as Yup from "yup";
+import * as Yup from "yup";
 import "../scss/CreateNewItem.scss"
+import {Button} from "semantic-ui-react"
 
 
-const CreateNewItem = (status, errors, values) =>{
+const CreateNewItem = (errors, values, touched) =>{
     
     
-    const [goal, setGoal] = useState({name: "", category: "", location: "", date: ""});
+    // const [goal, setGoal] = useState({name: "", category: "", location: "", date: ""});
         
         
 
-    const changeHandler = event =>{
-        setGoal({...goal, [event.target.name]: event.target.value})
-    }
+    // const changeHandler = event =>{
+    //     setGoal({...goal, [event.target.name]: event.target.value})
+    // }
 
     //Prevents refresh of the page
     // const preventRefresh = event =>{
@@ -34,64 +35,62 @@ const CreateNewItem = (status, errors, values) =>{
                 <h2>Add New Goal</h2>
             </div>
             
-            <Form className="form" >
-                {/* onSubmit={submitHandler}> */}
+            <Form className="form" 
+            // onSubmit={handleSubmit}
+            >
                 <Field type="text" 
                 className="field" 
-                name="goal" 
+                name="name" 
                 placeholder="Your goal goes here..."
-                onChange={changeHandler} 
-                value={goal.goal}/>
-                {errors.name && (<p className="error">{errors.goal}</p>)}
+                style={
+                // If the user clicks on this field and leaves it blank, or tries to submit with filling out the field, an error will appear.  This styles the border.
+                errors.name && touched.name ? {border: "1px solid red"} : null} />
+                {errors.name && touched.name && (<>{errors.name}</>)}
 
                 <Field type="text" 
                 className="field" 
                 name="location" 
                 placeholder="Location" 
-                onChange={changeHandler} 
-                value={goal.location}
                 />
                 
-                <Field type="text" 
+                {/* <Field type="text" 
                 className="field" 
                 name="date" 
                 placeholder="Date" 
-                onChange={changeHandler} 
-                value={goal.date}
-                />
+                /> */}
                 
                 <Field component="textarea" 
                 type="text" 
                 className="goalDesc" 
                 name="description" 
                 placeholder="Goal description" 
-                onChange={changeHandler} 
-                value={goal.description}
                 /><br/>
                 
                 
                     
                     {/* <label>Make Private<Field type="checkbox" name="isPrivate"/></label> */}
-                    <div className="goalBtn">
+                    {/* <div className="goalBtn">
                         <button className="submitBtn">Submit</button>
                         <button className="cancelBtn">Cancel</button>
-                    </div>
+                    </div> */}
+
+                <Button color="#e6e6e6" type="submit">Save</Button>
                 
 
                 {/* Displays submitted form */}
                 {/* <div className="Container">
                     <div className="row">
-                        {goal.map((item,i)=>{
-                            return <div key={item.id} 
+                        {goal.map(item=>(
+                            <div key={item.id} 
                             name={item.goal} 
                             category={item.goal} 
                             location={item.location} 
                             date={item.date} 
                             description={item.description} />
-                        })}
+                        ))}
                     </div>
-                </div> */}
-                
+                </div>
+                 */}
             </Form>
         </div>
     )
@@ -99,22 +98,24 @@ const CreateNewItem = (status, errors, values) =>{
 
 const FormikNewGoal = withFormik({
     // Making sure the form fields receive a value
-    mapPropsToValues({goal, category, location, date, description, isPrivate}){
+    mapPropsToValues({name, location, description}){
         return{
-            goal: goal || "",
-            category: category || "",
+            name: name || "",
             location: location || "",
-            description: description || "",
-            isPrivate: isPrivate || false
+            description: description || ""
         };
     },
 
     // Form validation
-    // validationSchema: Yup.object().shape({
-    //     goal: Yup.string().required("Required field")
-    // })
+    validationSchema: Yup.object().shape({
+        name: Yup.string().required("Required field")
+    }),
 
-    // // Api
+    // handleSubmit(values, formikBag){
+    //     formikBag.props.backEnd(values,formikBag.props.something);
+    // }
+
+    // Api
     // submitHandler(values,{setStatus}){
     //     axios
     //         .post("https://reqres.in/api/users/", values)
