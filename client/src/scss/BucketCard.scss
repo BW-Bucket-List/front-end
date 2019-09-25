@@ -1,5 +1,5 @@
 .bucket-list {
-    div.ui {
+    div.ui.card {
         border: 2px solid black;
         margin: 20px;
         margin-top: 0;
@@ -13,4 +13,29 @@
           transform: scale(1.05);
         }
     }
+
+    .extra {
+      text-align: center;
+    }
+
+    button{
+      margin: 2%;
+      padding: 3%;
+      border-radius: 10px;
+      border: none;
+      align-self: center;
+      background-color: #fcc024;
+      color: #74898a;
+      font-size: 1rem;
+      font-weight: bold;
+      font-family: 'Merienda One', cursive;
+      box-shadow: 0 0 3px 3px #74898a;
+    
+    }
+    
+    button:hover{
+      background-color: #74898a;
+      color: #fcc024;
+    }
 }
+
