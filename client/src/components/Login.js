@@ -28,13 +28,13 @@ const Login = (props) =>{
   }
 
   return(
+  <div className='logIn-Main'>
     <div className='logIn-div'>
 
                 <h1>Log In</h1>
                 <p>Please fill in this form to log into account!</p>
 
                 <form onSubmit={handleSubmit}  className='logIn-form'>
-
                     <div className='access-logIn-inputs'>
                         <div className='username'>
                             <i class="fas fa-user"></i>
@@ -53,10 +53,15 @@ const Login = (props) =>{
                     <div className='button-div2'>
                         <button className='signUp-button'>Log In</button>
                     </div>
-
                 </form> {/* logIn-form end */}
 
-        </div> /* logIn-div end */
+        </div> {/* logIn-div end  */}
+
+                <div className='form-image'>
+                    <img src='https://66.media.tumblr.com/57a304cbe239308bb1e7d13d7c4f978e/tumblr_o2n1ylyF7S1tsnmibo1_400.jpg'></img>
+                </div>
+
+    </div>
   )
 }
 

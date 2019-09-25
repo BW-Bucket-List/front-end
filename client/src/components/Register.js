@@ -29,12 +29,13 @@ const Register = (props) =>{
   }
 
   return(
+<div className='signUp-Main'>
     <div className='signUp-div'>
 
-    <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account!</p>
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account!</p>
 
-    <form onSubmit={handleSubmit} className='signUp-form'>
+      <form onSubmit={handleSubmit} className='signUp-form'>
 
         <div className='access-inputs'>
             <div className='email'>
@@ -52,16 +53,22 @@ const Register = (props) =>{
         </div> {/* access-inputs end */}
 
         <div className='prev-user'>
-            <p>Already have an account? <Link to='/login' className='a-tag-logIn' src='#'>Login here.</Link></p>
+            <p>Already have an account?{' '}<Link to='/login' className='a-tag-logIn' src='#'>Login here.</Link></p>
         </div>
 
         <div className='button-div'>
             <button className='signUp-button'>Register</button>
         </div>
 
-    </form> {/* signUp-form end */}
+      </form> {/* signUp-form end */}
 
-</div> /* signUp-div end */
+    </div> {/* signUp-div end  */}
+
+     <div className='form-image'>
+          <img src='https://66.media.tumblr.com/57a304cbe239308bb1e7d13d7c4f978e/tumblr_o2n1ylyF7S1tsnmibo1_400.jpg'></img>
+     </div>
+
+</div> /* signUp-Main */
   )
 }
 
