@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 import {Link} from 'react-router-dom';
 import LoginPic from '../Images/LoginPic.jpg';
+import {connect} from 'react-redux';
+import {loginUser} from '../actions';
 
 const Login = (props) =>{
   const [credentials, setCredentials] = useState({
@@ -17,13 +19,10 @@ const Login = (props) =>{
   }
 
   const handleSubmit = e =>{
+    console.log('Do IT!');
     e.preventDefault();
-    axiosWithAuth()
-      .post('/auth/login',credentials)
-      .then(res =>{
-        localStorage.setItem('token', res.data.payload)
-        props.history.push('')      
-      })
+    props.loginUser(credentials);
+    props.history.push('')
   }
 
   return(
@@ -59,4 +58,11 @@ const Login = (props) =>{
   )
 }
 
-export default Login;
+const mapStateToProps = state =>{
+  console.log('mSTP', state);
+  return{
+
+  }
+}
+
+export default connect(mapStateToProps,{loginUser})(Login);
