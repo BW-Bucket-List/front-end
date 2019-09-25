@@ -2,8 +2,10 @@ import React, {useState, useEffect} from 'react';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 import {Link} from 'react-router-dom';
 import LoginPic from '../Images/LoginPic.jpg';
+import '../scss/Register.scss';
 import {connect} from 'react-redux';
 import {registerUser} from '../actions';
+
 
 const Register = (props) =>{
   const [credentials, setCredentials] = useState({
@@ -26,42 +28,46 @@ const Register = (props) =>{
   }
 
   return(
-    <div className="loginPage">
-      <h1>Welcome to Bucket List!</h1>
-      <h2>Register</h2>
-      <div className='mainContent'>
-        <div className='leftContent'>
-          <form onSubmit={handleSubmit} className="loginForm">
-            <input
-              type="email"
-              name="email"
-              onChange={handleChange}
-              value={credentials.email}
-              placeholder="Email"
-            />
-            <input
-              type="text"
-              name="username"
-              onChange={handleChange}
-              value={credentials.username}
-              placeholder="Username"
-            />
-            <input
-              type="password"
-              name="password"
-              onChange={handleChange}
-              value={credentials.password}
-              placeholder="Password"
-            />
-            <button>Register</button>
-          </form>
-          <p>Already have an account?{' '}<Link to='/login' className='link'>click here!</Link></p>
+<div className='signUp-Main'>
+    <div className='signUp-div'>
+
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account!</p>
+
+      <form onSubmit={handleSubmit} className='signUp-form'>
+
+        <div className='access-inputs'>
+            <div className='email'>
+                <i class="fas fa-envelope"></i>
+                <input className='signUp-input' type='email'  onChange={handleChange} name='email' value={credentials.email} placeholder='Email'></input>
+            </div>
+            <div className='username'>
+                <i class="fas fa-user"></i>
+                <input className='signUp-input' type='name' onChange={handleChange} name='username' value={credentials.username} placeholder='Username'></input>
+             </div>
+             <div className='password'>
+                <i class="fas fa-lock"></i>
+                <input className='signUp-input' type='password' onChange={handleChange} name='password' value={credentials.password} placeholder='Password'></input>
+            </div>
+        </div> {/* access-inputs end */}
+
+        <div className='prev-user'>
+            <p>Already have an account?{' '}<Link to='/login' className='a-tag-logIn' src='#'>Login here.</Link></p>
         </div>
-        <div className='rightContent'>
-          <img src={LoginPic} alt='Assorted items on a wooden table' className='loginPageImg' />
+
+        <div className='button-div'>
+            <button className='signUp-button'>Register</button>
         </div>
-      </div>
-    </div>
+
+      </form> {/* signUp-form end */}
+
+    </div> {/* signUp-div end  */}
+
+     <div className='form-image'>
+          <img src='https://66.media.tumblr.com/57a304cbe239308bb1e7d13d7c4f978e/tumblr_o2n1ylyF7S1tsnmibo1_400.jpg'></img>
+     </div>
+
+</div> /* signUp-Main */
   )
 }
 

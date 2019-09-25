@@ -25,103 +25,103 @@ code {
 }
 
 
-.loginPage{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #a4ccd5; 
-  font-family: 'Merienda One', cursive;
+// .loginPage{
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   background-color: #a4ccd5; 
+//   font-family: 'Merienda One', cursive;
 
-  h1{
-    font-size: 4rem;
-    margin-top: 5%;
-    color: #74898a;
-    text-shadow: 1.5px 1.5px #fcc024;
-  }
+//   h1{
+//     font-size: 4rem;
+//     margin-top: 5%;
+//     color: #74898a;
+//     text-shadow: 1.5px 1.5px #fcc024;
+//   }
 
-  h2{
-    font-size: 3.5rem;
-    color: #74898a;
-    text-shadow: 1.5px 1.5px #fcc024;
-  }
-}
+//   h2{
+//     font-size: 3.5rem;
+//     color: #74898a;
+//     text-shadow: 1.5px 1.5px #fcc024;
+//   }
+// }
 
-.mainContent{
-  background-color: #e6e6e6;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  padding: 0px;
-  box-shadow: 0 0 3px 3px #74898a;
+// .mainContent{
+//   background-color: #e6e6e6;
+//   border-radius: 10px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 80%;
+//   padding: 0px;
+//   box-shadow: 0 0 3px 3px #74898a;
 
 
-  .leftContent{
-    width: 50%;
-    margin: 2%;
-    height: auto;
+//   .leftContent{
+//     width: 50%;
+//     margin: 2%;
+//     height: auto;
 
-    .loginForm{
-      display: flex;
-      flex-direction: column;
+//     .loginForm{
+//       display: flex;
+//       flex-direction: column;
 
-      input{
-        padding: 3%;
-        margin: 2%;
-        border-radius: 10px;
-      }
+//       input{
+//         padding: 3%;
+//         margin: 2%;
+//         border-radius: 10px;
+//       }
 
-      button{
-        width: 30%;
-        margin: 2%;
-        padding: 3%;
-        border-radius: 10px;
-        border: none;
-        align-self: center;
-        background-color: #fcc024;
-        color: #74898a;
-        font-size: 1rem;
-        font-weight: bold;
-        font-family: 'Merienda One', cursive;
-        box-shadow: 0 0 3px 3px #74898a;
+//       button{
+//         width: 30%;
+//         margin: 2%;
+//         padding: 3%;
+//         border-radius: 10px;
+//         border: none;
+//         align-self: center;
+//         background-color: #fcc024;
+//         color: #74898a;
+//         font-size: 1rem;
+//         font-weight: bold;
+//         font-family: 'Merienda One', cursive;
+//         box-shadow: 0 0 3px 3px #74898a;
 
-      }
+//       }
 
-      button:hover{
-        background-color: #74898a;
-        color: #fcc024;
-      }
-    }
+//       button:hover{
+//         background-color: #74898a;
+//         color: #fcc024;
+//       }
+//     }
 
-    p{
-      font-size: .9rem;
-      text-align: center;
+//     p{
+//       font-size: .9rem;
+//       text-align: center;
 
-      .link{
-        color: #74898a;
-        font-weight: bold;
-        text-shadow: .3px .3px #232222;
-        font-size: 1.3rem;
-      }
+//       .link{
+//         color: #74898a;
+//         font-weight: bold;
+//         text-shadow: .3px .3px #232222;
+//         font-size: 1.3rem;
+//       }
 
-      .link:hover{
-        color: #fcc024;
-      }
-    }
-  }
+//       .link:hover{
+//         color: #fcc024;
+//       }
+//     }
+//   }
 
-  .rightContent{
-    width: 55%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
+//   .rightContent{
+//     width: 55%;
+//     height: 100%;
+//     display: flex;
+//     justify-content: flex-end;
 
-    img{
-      width: 100%;
-      height: auto;
-      border-radius: 0 10px 10px 0;
-    }
-  }
-}
+//     img{
+//       width: 100%;
+//       height: auto;
+//       border-radius: 0 10px 10px 0;
+//     }
+//   }
+// }
