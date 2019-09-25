@@ -44,7 +44,7 @@ const Register = (props) =>{
             </div>
             <div className='username'>
                 <i class="fas fa-user"></i>
-                <input className='signUp-input' type='name' onChange={handleChange} name='userName' value={credentials.username} placeholder='Username'></input>
+                <input className='signUp-input' type='name' onChange={handleChange} name='username' value={credentials.username} placeholder='Username'></input>
              </div>
              <div className='password'>
                 <i class="fas fa-lock"></i>

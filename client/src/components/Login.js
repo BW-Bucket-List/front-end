@@ -38,11 +38,11 @@ const Login = (props) =>{
                     <div className='access-logIn-inputs'>
                         <div className='username'>
                             <i class="fas fa-user"></i>
-                            <input className='logIn-input' type='name' onChange={handleChange} name='userName' value={credentials.username} placeholder='Username'></input>
+                            <input className='logIn-input' type='text' name='username' onChange={handleChange} value={credentials.username} placeholder='Username'></input>
                          </div>
                          <div className='password'>
                             <i class="fas fa-lock"></i>
-                            <input className='logIn-input' type='password' onChange={handleChange} value={credentials.password} name='password' placeholder='Password'></input>
+                            <input className='logIn-input' type='password' name='password' onChange={handleChange} value={credentials.password}  placeholder='Password'></input>
                         </div>
                     </div> {/* access-logIn-inputs end */}
 
