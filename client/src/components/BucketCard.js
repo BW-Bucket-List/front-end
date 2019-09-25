@@ -2,8 +2,9 @@ import React from 'react';
 import { Card, Image, Modal, Button } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import '../scss/BucketCard.scss';
-import loginPic from '../Images/LoginPic.jpg';
+import bucketPic from '../Images/bucketList.jpg';
 import Items from '../components/Items';
+import {Link} from 'react-router-dom';
 
 //import LoginPic from '../Images/LoginPic.jpg';
 
@@ -12,7 +13,7 @@ function BucketCard (props) {
     const {name, isPrivate} = props;
     return (
         <Card key={'1'} className='bucket-card'>
-        <Image src={loginPic} wrapped ui={false} />
+        <Image src={bucketPic} wrapped ui={false} />
         <Card.Content>
             <h2>Bucket List</h2>
             <Card.Header>{'Title: ' + name}</Card.Header>
@@ -20,7 +21,7 @@ function BucketCard (props) {
             <Card.Description>{'isPrivate: ' + isPrivate}</Card.Description>
         </Card.Content>
         <Card.Content extra>
-            <button>View Items</button>
+            <button><Link to='/items'>Open the List!</Link></button>
         </Card.Content>
         </Card>
     )

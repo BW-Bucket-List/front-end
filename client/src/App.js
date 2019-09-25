@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './scss/App.scss';
 import {Route, Link} from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute'
-
+import CreateNewItem from "./components/CreateNewItem"
 import Login from './components/Login';
 import Register from './components/Register';
 import ProfilePage from './components/ProfilePage';
@@ -29,8 +29,6 @@ function App() {
   return (
     <div className="App">
       <div className='routes'>
-        <Route path= '/' component={NavBar} />
-        {serverError}
         <Route exact path= '/' component={Login} />
         <Route path= '/login' component={Login} />
         <Route path= '/register' component={Register} />
@@ -50,7 +48,8 @@ function App() {
             />
           )
         }}/>
-
+        
+        <Route path="/items/newitem" component={CreateNewItem} />
       </div>
 
     </div>

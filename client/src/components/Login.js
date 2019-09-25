@@ -19,7 +19,7 @@ const Login = (props) =>{
   const handleSubmit = e =>{
     e.preventDefault();
     axiosWithAuth()
-      .post('',credentials)
+      .post('/auth/login',credentials)
       .then(res =>{
         localStorage.setItem('token', res.data.payload)
         props.history.push('')      
@@ -28,7 +28,8 @@ const Login = (props) =>{
 
   return(
     <div className="loginPage">
-      <h1>Login</h1>
+      <h1>Welcome to Bucket List!</h1>
+      <h2>Login</h2>
       <div className='mainContent'>
         <div className='leftContent'>
           <form onSubmit={handleSubmit} className="loginForm">
