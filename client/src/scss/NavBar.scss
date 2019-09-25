@@ -1,41 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600&amp;display=swap');
 
-*{
-    
-    border: 1px red solid;
-}
 
-.nav-links {
+.Global-Navigation {
+    
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 1.5rem;
-    background-color: #74898A;
+    background: #74898A;
+    padding: .5rem 1rem;
     
-}
 
-.left-side-link{
-    width: 50%;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-family: 'Big Shoulders Text', cursive;
+  }
+  .Global-Navigation h1 {
+    font-size: 3rem;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
     color: #232222;
-}
-
-.nav-links .left-side-link a {
-    
-    font-size: 4rem;
-    
-}
-
-.nav-links .right-side-link a {
-    justify-content: space-between;
-    margin: 30px;
-    font-size: 1.8rem;
-    text-decoration: none;
-    color: #e6e6e6;
-}
-
+  }
+  .Global-Navigation .HeaderLinks {
+    padding: 1.5rem;
+    color: #E6E6E6;
+    font-size: 1.2rem;
+    font-family: 'Titillium Web', sans-serif;
+  }
+ 
+  @media (max-width: 500px) {
+    .Global-Navigation {
+      flex-direction: column;
+      padding: 0rem;
+    }
+    .Global-Navigation .HeaderLinks {
+      padding: 0.5rem;
+      font-size: 1.05rem;
+    }
+    .Global-Navigation div {
+      padding: 1rem 0rem;
+    }
+  }

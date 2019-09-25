@@ -4,20 +4,22 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
     return (
-        <div className='nav-page-section'>
-              <div className='nav-links'>
+        <div className='Global-Navigation'>
+              {/* <div className='nav-links'> */}
 
                 <div className='left-side-link'>
-                  <Link to='/'>Bucket List</Link>
+                  <h1>Bucket List</h1>
                 </div>
               
                 <div className='right-side-link'>
-                  <Link to='/'>Login</Link>
-                  <Link to='/profile'>Profile</Link>
-                  <Link to='/buckets'>My Buckets</Link>
+                  <a href="https://dreamy-euler-bcd130.netlify.com/index.html" className="HeaderLinks">Home</a>
+                  <a href="https://dreamy-euler-bcd130.netlify.com/about.html" className="HeaderLinks">About Us</a>
+                  <Link to='/' className="HeaderLinks">Login</Link>
+                  <Link to='/profile' className="HeaderLinks">Profile</Link>
+                  <Link to='/buckets' className="HeaderLinks">My Buckets</Link>
                 </div>
 
-              </div> {/* nav-links end */}
+              {/* </div> nav-links end */}
         </div> /* nav-page-section end */
     )
 }
