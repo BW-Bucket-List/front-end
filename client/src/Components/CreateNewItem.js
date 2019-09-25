@@ -1,21 +1,21 @@
 import React, {useState} from "react";
 import {withFormik, Form, Field} from "formik";
 //import * as Yup from "yup";
-import "../scss/NewGoal.scss"
+import "../scss/CreateNewItem.scss"
 
 
 const CreateNewItem = (status, errors, values) =>{
     
     
-    const [goal, setGoal] = useState({});
+    const [goal, setGoal] = useState({name: "", category: "", location: "", date: ""});
         
-        // {goal: "", category: "", location: "", date: ""});
+        
 
     const changeHandler = event =>{
         setGoal({...goal, [event.target.name]: event.target.value})
     }
 
-    // //Prevents refresh of the page
+    //Prevents refresh of the page
     // const preventRefresh = event =>{
     //     event.preventDefault();
     //     props.
