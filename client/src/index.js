@@ -6,12 +6,19 @@ import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 //import {createStore, applyMiddleware} from 'redux';
 import './scss/App.scss';
+import {Provider} from 'react-redux';
+import thunk from 'redux-thunk';
+// import {reducer} from './reducers';
+
+// const store = createStore(reducer, (applyMiddleware(thunk)));
+
 //import {Provider} from 'react-redux';
 //import thunk from 'redux-thunk';
 //import {reducer} from './reducers';
 
 
 //const store = createStore(reducer, (applyMiddleware(thunk)));
+
 
 
 ReactDOM.render(
@@ -21,15 +28,16 @@ ReactDOM.render(
       <App />
       <Footer />
     </Router>
+  /* </Provider> */,
   // </Provider>
   ,
  document.getElementById('root'));
 
-<<<<<<< HEAD
-
-=======
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
+
+// serviceWorker.unregister();
+
 //serviceWorker.unregister();
->>>>>>> 8d4a4cc40d0998ead42c64eff61740fdff67e23b
+
