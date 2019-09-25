@@ -1,10 +1,14 @@
 import React from "react";
 import '../scss/Items.scss'
+import {Link} from "react-router-dom"
 
 const Items = props =>{
     
     return(
+
+
         <div>
+            <Link to="items/newitem"><button>Add+</button></Link>
             {
                 props.items.map( item => (
                     <div key={item.id} className='item'>
