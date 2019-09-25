@@ -5,7 +5,6 @@ import LoginPic from '../Images/LoginPic.jpg';
 
 const Register = (props) =>{
   const [credentials, setCredentials] = useState({
-    name: '',
     email: '',
     username: '',
     password: ''
@@ -21,7 +20,7 @@ const Register = (props) =>{
   const handleSubmit = e =>{
     e.preventDefault();
     axiosWithAuth()
-      .post('',credentials)
+      .post('/auth/register',credentials)
       .then(res =>{
         localStorage.setItem('token', res.data.payload)
         props.history.push('')      
@@ -30,17 +29,11 @@ const Register = (props) =>{
 
   return(
     <div className="loginPage">
-      <h1>Register</h1>
+      <h1>Welcome to Bucket List!</h1>
+      <h2>Register</h2>
       <div className='mainContent'>
         <div className='leftContent'>
           <form onSubmit={handleSubmit} className="loginForm">
-            <input
-              type="text"
-              name="name"
-              onChange={handleChange}
-              value={credentials.name}
-              placeholder="Name"
-            />
             <input
               type="email"
               name="email"
