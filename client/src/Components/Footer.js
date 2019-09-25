@@ -1,16 +1,14 @@
 import React from 'react';
-import './Footer.css';
+import '../scss/Footer.scss';
 
 function Footer() {
     return (
         
-                <div className='footer-Section'>
-
-                  <div className='copyright'>
-                        <p>Copyright © 2019, Bucket List. All Rights Reserved.</p>
-                  </div>
-                  
-            </div> /* footer-Section end */
+      <footer>
+            <div class="container">
+                  <p>Bucket List Copyrights 2019</p>
+            </div>
+      </footer> /* footer-Section end */
 
     )
 }
