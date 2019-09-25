@@ -8,7 +8,7 @@ const Items = props =>{
 
 
         <div>
-            <Link to="/newgoal">Add+</Link>
+            <Link to="/newitem"><button>Add+</button></Link>
             {
                 props.items.map( item => (
                     <div key={item.id} className='item'>

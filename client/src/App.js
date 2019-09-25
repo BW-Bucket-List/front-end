@@ -50,7 +50,8 @@ function App() {
             />
           )
         }}/>
-        <Route path="/newgoal" component={NewGoal} />
+
+        <Route path="/items/newitem" component={} />
       </div>
 
     </div>
