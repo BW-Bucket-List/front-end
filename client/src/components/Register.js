@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 import {Link} from 'react-router-dom';
 import LoginPic from '../Images/LoginPic.jpg';
+import {connect} from 'react-redux';
+import {registerUser} from '../actions';
 
 const Register = (props) =>{
   const [credentials, setCredentials] = useState({
@@ -19,12 +21,8 @@ const Register = (props) =>{
 
   const handleSubmit = e =>{
     e.preventDefault();
-    axiosWithAuth()
-      .post('/auth/register',credentials)
-      .then(res =>{
-        localStorage.setItem('token', res.data.payload)
-        props.history.push('')      
-      })
+    props.registerUser(credentials);
+    props.history.push('')
   }
 
   return(
@@ -67,4 +65,11 @@ const Register = (props) =>{
   )
 }
 
-export default Register;
+const mapStateToProps = state =>{
+  console.log('mSTP register', state);
+  return{
+
+  }
+}
+
+export default connect(mapStateToProps,{registerUser})(Register);
