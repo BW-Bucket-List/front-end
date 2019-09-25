@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600&amp;display=swap');
 
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
 
-.copyright {
-    color: black;
+
+footer {
+    background-color: #74898A;
     text-align: center;
-    font-family: 'Big Shoulders Text', cursive;
-    border: 1px solid black;
-    background-color: #E6E6E6;
+    color: #171b1b;
+    padding: 1rem 0;
+  }
+  
+footer p {
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
 }
