@@ -23,6 +23,7 @@ function BucketList (props) {
     },[])
 
     return (
+        <div className='buckets'>
         <section className='bucket-list'>
             {bucketLists?
             bucketLists.map(bucket => (
@@ -33,6 +34,7 @@ function BucketList (props) {
             ))
             : null }
         </section>
+        </div>
     );
 }
 

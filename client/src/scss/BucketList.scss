@@ -1,7 +1,12 @@
-.bucket-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    background-color: #a4ccd5; 
+.buckets {
+    height: 84vh;
+    background-color: #a4ccd5;
     padding: 30px;
-}
+
+    .bucket-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        font-family: 'Poppins', sans-serif;
+    }
+  }

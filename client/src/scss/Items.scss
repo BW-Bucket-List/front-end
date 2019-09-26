@@ -1,12 +1,13 @@
 .item-page {
     background-color: #a4ccd5;
-    height: 100vh;
+    height: 84vh;
 
     .items {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         padding: 30px;
+        font-family: 'Poppins', sans-serif;
     }
 
     .create-item {
@@ -53,7 +54,7 @@
         color: #74898a;
         font-size: 1rem;
         font-weight: bold;
-        font-family: 'Merienda One', cursive;
+        font-family: 'Poppins', sans-serif;
         box-shadow: 0 0 3px 3px #74898a;
       
       }

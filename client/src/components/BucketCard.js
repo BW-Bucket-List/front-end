@@ -21,7 +21,7 @@ function BucketCard (props) {
             <Card.Description>{'isPrivate: ' + isPrivate}</Card.Description>
         </Card.Content>
         <Card.Content extra>
-            <button><Link to='/items'>Open the List!</Link></button>
+            <button><Link to='/items'>Open The List!</Link></button>
         </Card.Content>
         </Card>
     )
