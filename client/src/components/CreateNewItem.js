@@ -40,7 +40,7 @@ const CreateNewItem = ({errors, touched, status}) =>{
         <Modal.Content>
         <div className="newGoal">
             <div className="goalHeader">
-                <h2>Add New Goal</h2>
+                <h2>Create New Goal</h2>
             </div>
             
             <Form className="form" 
@@ -78,7 +78,7 @@ const CreateNewItem = ({errors, touched, status}) =>{
                     
                     {/* <label>Make Private<Field type="checkbox" name="isPrivate"/></label> */}
                     <div className="goalBtn">
-                        <button className="submitBtn">Save</button>
+                        <button className="submitBtn" type="submit">Save</button>
                         {/* <button className="cancelBtn">Cancel</button> */}
                     </div>
 
