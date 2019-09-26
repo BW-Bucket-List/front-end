@@ -17,29 +17,24 @@ const Items = props => {
                         <Card key={item.id} className='item'>
                             <Card.Content>
                                 <h2>Item</h2>
-                                <Card.Header>Name: {item.name}</Card.Header>
+                                <Card.Header>Name: {item.bucket_list_item_name}</Card.Header>
                             </Card.Content>
                             <Card.Content extra>
-                                <strong>Location:</strong> {item.location}
-                            </Card.Content>
-                            <Card.Content extra>
-                                <strong>Description:</strong> {item.description}
-                            </Card.Content>
-                            <Card.Content extra>
-                                <strong>Entries</strong>
-                                <ul>
-                                    {item.entries.map(entry => (
-                                        <li>{entry}</li>
-                                    ))}
-                                </ul>
+                                <strong>Journal:</strong> {item.bucket_list_item_journal}
                             </Card.Content>
                             <Card.Content extra>
                                 <strong>Photos</strong>
                                 <ul>
-                                    {item.photos.map(photo => (
+                                    {item.bucket_list_item_photo? item.bucket_list_item_photo.map(photo => (
                                         <li>{photo}</li>
-                                    ))}
+                                    )) : "No Images Uploaded" }
                                 </ul>
+                            </Card.Content>
+                            <Card.Content extra>
+                                <strong>Voice:</strong> {item.bucket_list_item_voice ? item.bucket_list_item_voice : "No Voice Recordings"}
+                            </Card.Content>
+                            <Card.Content extra>
+                                <strong>Video:</strong> {item.bucket_list_item_video ? item.bucket_list_item_video : "No Videos"}
                             </Card.Content>
                             <Card.Content extra className='buttons'>
                                 {/* <button><Link to='items/newitem'>Edit</Link></button> */}

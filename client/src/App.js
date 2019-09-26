@@ -1,29 +1,68 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './scss/App.scss';
-import {Route, Link} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute'
 import CreateNewItem from "./components/CreateNewItem"
 import Login from './components/Login';
 import Register from './components/Register';
 import ProfilePage from './components/ProfilePage';
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
 import BucketList from './components/BucketList';
 import Items from './components/Items';
 
-const testdata = [
-  {id: '1',
-   name: 'series',
-   isPrivate: true,
-   items: ['a','b','c']},
-   {id: '2',
-   name: 'movies',
-   isPrivate: true,
-   items: ['d','e','f']}
+const sharedTestData = [
+  {bucket_list_id: 1,
+   bucket_list_name: 'Games to Play',
+   private: 0,
+   items: [
+     {
+      item_id : 1,
+      bucket_list_item_name: 'Purchase console',
+      bucket_list_item_journal: 'https://bla.com',
+      bucket_list_item_voice: null,
+      bucket_list_item_photo: null
+     }
+   ]},
+   {bucket_list_id: 2,
+   bucket_list_name: 'Travel to spain',
+   private: 0,
+   items: [
+    {
+     item_id : 1,
+     bucket_list_item_name: 'Purchase tickets',
+     bucket_list_item_journal: 'https://bla.com',
+     bucket_list_item_voice: null,
+     bucket_list_item_photo: null
+    },
+    {
+      item_id : 2,
+      bucket_list_item_name: 'Book hotel',
+      bucket_list_item_journal: 'https://bla.com',
+      bucket_list_item_voice: null,
+      bucket_list_item_photo: null
+     }
+  ]}
 ]
+
+const privateTestData = [
+  {bucket_list_id: 1,
+   bucket_list_name: 'Read 10 books',
+   private: 1,
+   items: [
+     {
+      item_id : 1,
+      bucket_list_item_name: 'Research books',
+      bucket_list_item_journal: 'https://bla.com',
+      bucket_list_item_voice: null,
+      bucket_list_item_photo: null
+     }
+   ]}
+  ]
 
 function App() {
 
-  const [bucketLists, setBucketLists] = useState(testdata)
+  const [sharedBucketLists, setSharedBucketLists] = useState(sharedTestData)
+  const [privateBucketLists, setPrivateBucketLists] = useState(privateTestData)
   const [serverError, setServerError] = useState('')
 
   return (
@@ -36,15 +75,17 @@ function App() {
         <Route path= '/buckets' render={props => {
           return (
             <BucketList {...props} 
-            bucketLists={bucketLists}
-            setBucketLists={setBucketLists}
+            sharedBucketLists={sharedBucketLists}
+            setSharedBucketLists={setSharedBucketLists}
+            privateBucketLists={privateBucketLists}
+            setPrivateBucketLists={setPrivateBucketLists}
             setServerError={setServerError}/>
           )
         }}/>
         <Route path= '/items' render={props => {
           return (
             <Items {...props} 
-            items={[{name: 'barcelona', location: 'spain', description: 'something', entries: ['a','b'], photos: ['c','d']}]}
+            items={sharedTestData[1].items}
             />
           )
         }}/>
