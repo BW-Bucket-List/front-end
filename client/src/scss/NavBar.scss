@@ -9,6 +9,8 @@
     align-items: center;
     background: #74898A;
     padding: .5rem 1rem;
+
+    white-space: nowrap;
     
 
   }
@@ -25,7 +27,7 @@
     font-family: 'Titillium Web', sans-serif;
   }
  
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     .Global-Navigation {
       flex-direction: column;
       padding: 0rem;

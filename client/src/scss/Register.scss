@@ -1,14 +1,15 @@
 .signUp-Main {
     display: flex;
-    padding-top: 150px;
-    padding-bottom: 120px;
+    // padding-top: 150px;
+    // padding-bottom: 120px;
+    height: 84vh;
 }
 
 .signUp-div { 
     border: 1px solid black;
     background-color: #6E9A64;
     text-shadow: 1px 1px black;
-    height: 530px;
+    // height: 530px;
     margin-left: auto;
 }
 
@@ -151,7 +152,8 @@
 }
 
 .form-image img {
-    height: 530px;
+    height: 100%;
+    // height: 530px;
     width: 648px;
     margin-right: 49px;
     border: 1px solid black;
