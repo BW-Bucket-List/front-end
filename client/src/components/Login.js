@@ -27,26 +27,42 @@ const Login = (props) =>{
   }
 
   return(
-  <div className='logIn-Main'>
-    <div className='logIn-div'>
+    <div className='signUp-Main'>
+    <div className='signUp-div'>
+
       <h1>Log In</h1>
-      <form onSubmit={handleSubmit}  className='logIn-form'>
-        <div className='access-logIn-inputs'>
-          <div className='username'>
-            <i className="fas fa-user"></i>
-            <input className='logIn-input' type='text' name='username' onChange={handleChange} value={credentials.username} placeholder='Username'></input>
-          </div>
-          <div className='password'>
-            <i className="fas fa-lock"></i>
-            <input className='logIn-input' type='password' name='password' onChange={handleChange} value={credentials.password}  placeholder='Password'></input>
-          </div>
-        </div> {/* access-logIn-inputs end */}
-        <p>Not registered?{' '}<Link to='/register' className='a-tag-logIn' src='#'>Sign up here</Link></p>
-        <button className='logIn-button'>Log In</button>
-      </form> {/* logIn-form end */}
-    </div> {/* logIn-div end  */}
-    <img src='https://66.media.tumblr.com/57a304cbe239308bb1e7d13d7c4f978e/tumblr_o2n1ylyF7S1tsnmibo1_400.jpg' alt='vacation items'></img>
-  </div>
+      <p>Please fill in this form to log into account!</p>
+
+      <form onSubmit={handleSubmit} className='signUp-form'>
+
+        <div id='first-Input' className='access-inputs'>
+            <div className='username'>
+                <i className="fas fa-user"></i>
+                <input className='signUp-input' type='name' onChange={handleChange} name='username' value={credentials.username} placeholder='Username'></input>
+             </div>
+             <div className='password'>
+                <i className="fas fa-lock"></i>
+                <input className='signUp-input' type='password' onChange={handleChange} name='password' value={credentials.password} placeholder='Password'></input>
+            </div>
+        </div> {/* access-inputs end */}
+
+        <div className='prev-user'>
+        <p>Not registered? <Link to='/register' className='a-tag-logIn'>Sign up here.</Link></p>
+        </div>
+
+        <div className='button-div'>
+            <button className='signUp-button'>Log In</button>
+        </div>
+
+      </form> {/* signUp-form end */}
+
+    </div> {/* signUp-div end  */}
+
+     <div className='form-image'>
+          <img src='https://66.media.tumblr.com/57a304cbe239308bb1e7d13d7c4f978e/tumblr_o2n1ylyF7S1tsnmibo1_400.jpg' alt='vacation items'></img>
+     </div>
+
+</div> /* signUp-Main */
   )
 }
 
