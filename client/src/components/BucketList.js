@@ -7,8 +7,6 @@ function BucketList (props) {
     // bucketList, setServerError state to be passed down as props
     const {sharedBucketLists, setSharedBucketLists, privateBucketLists, 
         setPrivateBucketLists, setServerError} = props;
-    
-    debugger
 
     // define backend server URL
     const backendURL = '';

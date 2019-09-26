@@ -1,12 +1,15 @@
 .item-page {
+    display: flex;
+    flex-direction: column;
     background-color: #a4ccd5;
-    height: 88.2vh;
+    min-height: 88.2vh;
 
     .items {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         padding: 30px;
+        padding-top: 0;
         font-family: 'Poppins', sans-serif;
     }
 
