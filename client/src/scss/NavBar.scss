@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600&amp;display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous|Titillium+Web:300,400,600&amp;display=swap');
 
 
 .Global-Navigation {
@@ -9,22 +9,22 @@
     align-items: center;
     background: #74898A;
     padding: .5rem 1rem;
-
     white-space: nowrap;
     
 
   }
   .Global-Navigation h1 {
     font-size: 3rem;
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: normal;
+    font-family: 'Righteous', cursive;
+    font-weight: bold;
     color: #232222;
   }
   .Global-Navigation .HeaderLinks {
     padding: 1.5rem;
     color: #E6E6E6;
     font-size: 1.2rem;
-    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-family: 'Righteous', cursive;
   }
  
   @media (max-width: 700px) {
