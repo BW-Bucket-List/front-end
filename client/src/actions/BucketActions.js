@@ -17,8 +17,10 @@ export const createBucket = () => dispatch =>{
   axiosWithAuth()
    .post()
    .then(res =>{
-     console.log('createBucket res', res);
-     
+     console.log('createBucket res', res); 
+   })
+   .catch(err =>{
+     console.log(err);
    }) 
 }
 
@@ -29,6 +31,9 @@ export const editBucket = () => dispatch =>{
     .then(res =>{
       console.log('editBucket put request', res);
     })
+    .catch(err =>{
+      console.log(err);
+    })
 }
 
 export const deleteBucket = () => dispatch =>{
@@ -37,5 +42,8 @@ export const deleteBucket = () => dispatch =>{
     .delete()
     .then(res =>{
       console.log('deleteBucket res', res);
+    })
+    .catch(err =>{
+      console.log(err);
     })
 }

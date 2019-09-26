@@ -53,7 +53,7 @@ const Register = (props) =>{
         </div> {/* access-inputs end */}
 
         <div className='prev-user'>
-            <p>Already have an account?{' '}<Link to='/login' className='a-tag-logIn' src='#'>Login here.</Link></p>
+            <p>Already have an account?{' '}<Link to='/login' className='a-tag-logIn' src='#'>Login here</Link></p>
         </div>
 
         <div className='button-div'>

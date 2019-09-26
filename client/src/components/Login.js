@@ -46,7 +46,7 @@ const Login = (props) =>{
                     </div> {/* access-logIn-inputs end */}
 
                     <div className='none-user'>
-                        <p>Not registered?{' '}<Link to='/register' className='a-tag-logIn' src='#'>Sign up here.</Link></p>
+                        <p>Not registered?{' '}<Link to='/register' className='a-tag-logIn' src='#'>Sign up here</Link></p>
                     </div>
 
                     <div className='button-div2'>

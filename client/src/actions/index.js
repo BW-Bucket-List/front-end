@@ -17,6 +17,9 @@ export const loginUser = (credentials) => dispatch =>{
       console.log(res);
       localStorage.setItem('token', res.data.token)
     })
+    .catch(err =>{
+      console.log(err);
+    })
 }
 
 export const registerUser = (credentials) => dispatch =>{
@@ -27,6 +30,9 @@ export const registerUser = (credentials) => dispatch =>{
     .then(res =>{
       console.log('registerRes', res);
       localStorage.setItem('message', res.data.message)
+    })
+    .catch(err =>{
+      console.log(err);
     })
 }
 
