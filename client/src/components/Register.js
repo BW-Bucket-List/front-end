@@ -22,9 +22,10 @@ const Register = (props) =>{
   }
 
   const handleSubmit = e =>{
+    console.log('register submit');
     e.preventDefault();
     props.registerUser(credentials);
-    props.history.push('')
+    props.history.push('/login')
   }
 
   return(
@@ -38,15 +39,15 @@ const Register = (props) =>{
 
         <div className='access-inputs'>
             <div className='email'>
-                <i class="fas fa-envelope"></i>
+                <i className="fas fa-envelope"></i>
                 <input className='signUp-input' type='email'  onChange={handleChange} name='email' value={credentials.email} placeholder='Email'></input>
             </div>
             <div className='username'>
-                <i class="fas fa-user"></i>
+                <i className="fas fa-user"></i>
                 <input className='signUp-input' type='name' onChange={handleChange} name='username' value={credentials.username} placeholder='Username'></input>
              </div>
              <div className='password'>
-                <i class="fas fa-lock"></i>
+                <i className="fas fa-lock"></i>
                 <input className='signUp-input' type='password' onChange={handleChange} name='password' value={credentials.password} placeholder='Password'></input>
             </div>
         </div> {/* access-inputs end */}

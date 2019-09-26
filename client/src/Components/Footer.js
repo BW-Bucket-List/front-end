@@ -5,7 +5,7 @@ function Footer() {
     return (
         
       <footer>
-            <div class="container">
+            <div className="container">
                   <p>Bucket List Copyrights 2019</p>
             </div>
       </footer> /* footer-Section end */
