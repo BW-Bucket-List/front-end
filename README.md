@@ -20,4 +20,4 @@ At minimum, this site should have the following features:
 
 * Authenticated user can share any "bucket list" they have created with another Authenticated BucketList user.
 
- Be hosted on hosting platform like "Netlify" or "Github Pages." --- [Bucket List Homepage](https://dreamy-euler-bcd130.netlify.com/index.html)
+ Be hosted on hosting platform like "Netlify" or "Github Pages." --- [Bucket List Homepage](https://bucket-list-kb.netlify.com/index.html)

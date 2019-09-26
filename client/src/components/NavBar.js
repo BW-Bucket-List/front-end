@@ -12,8 +12,8 @@ function NavBar() {
                 </div>
               
                 <div className='right-side-link'>
-                  <a href="https://dreamy-euler-bcd130.netlify.com/index.html" className="HeaderLinks">Home</a>
-                  <a href="https://dreamy-euler-bcd130.netlify.com/about.html" className="HeaderLinks">About Us</a>
+                  <a href="https://bucket-list-kb.netlify.com/index.html/" className="HeaderLinks">Home</a>
+                  <a href="https://bucket-list-kb.netlify.com/about.html" className="HeaderLinks">About Us</a>
                   <Link to='/' className="HeaderLinks">Login</Link>
                   <Link to='/profile' className="HeaderLinks">Profile</Link>
                   <Link to='/buckets' className="HeaderLinks">My Buckets</Link>
