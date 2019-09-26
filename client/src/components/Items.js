@@ -4,13 +4,16 @@ import 'semantic-ui-css/semantic.min.css';
 import '../scss/Items.scss';
 import { Link } from "react-router-dom";
 import EditItem from './EditItem';
-import CreateNewCard from "./CreateNewItem"
+import CreateNewItem from "./CreateNewItem"
 
 const Items = props => {
 
     return (
+
+        
+
         <div className='item-page'>
-            <Link to="items/newitem"><button className='create-item'><CreateNewCard /></button></Link>
+            <Link to="items/newitem"><button className='create-item'><CreateNewItem /></button></Link>
             <div className='items'>
                 {
                     props.items.map(item => (

@@ -3,7 +3,7 @@ import {axiosWithAuth} from '../utils/axiosWithAuth';
 import {Link} from 'react-router-dom';
 import LoginPic from '../Images/LoginPic.jpg';
 import '../scss/Login.scss';
-import {connect} from 'react-redux';
+//import {connect} from 'react-redux';
 import {loginUser} from '../actions';
 
 const Login = (props) =>{
@@ -71,4 +71,6 @@ const mapStateToProps = state =>{
   }
 }
 
-export default connect(mapStateToProps,{loginUser})(Login);
+// export default connect(mapStateToProps,{loginUser})(Login);
+
+export default Login;
