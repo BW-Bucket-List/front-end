@@ -17,9 +17,11 @@ export const createItem = () => dispatch =>{
   axiosWithAuth()
    .post()
    .then(res =>{
-     console.log('createItem res', res);
-     
-   }) 
+     console.log('createItem res', res); 
+   })
+   .catch(err =>{
+    console.log(err);
+  }) 
 }
 
 export const editItem = () => dispatch =>{
@@ -29,6 +31,9 @@ export const editItem = () => dispatch =>{
     .then(res =>{
       console.log('editItem put request', res);
     })
+    .catch(err =>{
+      console.log(err);
+    })
 }
 
 export const deleteItem = () => dispatch =>{
@@ -37,5 +42,8 @@ export const deleteItem = () => dispatch =>{
     .delete()
     .then(res =>{
       console.log('deleteItem res', res);
+    })
+    .catch(err =>{
+      console.log(err);
     })
 }

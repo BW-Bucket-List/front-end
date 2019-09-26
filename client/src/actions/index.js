@@ -1,5 +1,4 @@
 import {axiosWithAuth} from '../utils/axiosWithAuth';
-import BucketList from '../components/BucketList';
 
 export const LOGIN_USER_START = 'LOGIN_USER_START';
 export const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCESS';
@@ -18,6 +17,9 @@ export const loginUser = (credentials) => dispatch =>{
       console.log(res);
       localStorage.setItem('token', res.data.token)
     })
+    .catch(err =>{
+      console.log(err);
+    })
 }
 
 export const registerUser = (credentials) => dispatch =>{
@@ -27,7 +29,10 @@ export const registerUser = (credentials) => dispatch =>{
     .post('/auth/register', credentials)
     .then(res =>{
       console.log('registerRes', res);
-      localStorage.setItem('token', res.data.token)
+      localStorage.setItem('message', res.data.message)
+    })
+    .catch(err =>{
+      console.log(err);
     })
 }
 
