@@ -3,7 +3,8 @@ import {LOGIN_USER_START, LOGIN_USER_SUCCESS, REGISTER_USER_START, REGISTER_USER
 const initialState = {
   isFetching: false,
   isAuth: false,
-  error: ''
+  error: '',
+  data: []
   };
 
 

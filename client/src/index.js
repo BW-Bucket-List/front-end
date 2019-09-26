@@ -19,6 +19,7 @@ ReactDOM.render(
       <App />
       <Footer />
     </Router>
+    
   // </Provider>
   ,
  document.getElementById('root'));

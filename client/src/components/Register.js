@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import {axiosWithAuth} from '../utils/axiosWithAuth';
+import React, {useState} from 'react';
+// import {axiosWithAuth} from '../utils/axiosWithAuth';
 import {Link} from 'react-router-dom';
-import LoginPic from '../Images/LoginPic.jpg';
+// import LoginPic from '../Images/LoginPic.jpg';
 import '../scss/Register.scss';
 //import {connect} from 'react-redux';
 import {registerUser} from '../actions';
@@ -22,9 +22,10 @@ const Register = (props) =>{
   }
 
   const handleSubmit = e =>{
+    console.log('register submit');
     e.preventDefault();
     props.registerUser(credentials);
-    props.history.push('')
+    props.history.push('/login')
   }
 
   return(
@@ -38,21 +39,21 @@ const Register = (props) =>{
 
         <div className='access-inputs'>
             <div className='email'>
-                <i class="fas fa-envelope"></i>
+                <i className="fas fa-envelope"></i>
                 <input className='signUp-input' type='email'  onChange={handleChange} name='email' value={credentials.email} placeholder='Email'></input>
             </div>
             <div className='username'>
-                <i class="fas fa-user"></i>
+                <i className="fas fa-user"></i>
                 <input className='signUp-input' type='name' onChange={handleChange} name='username' value={credentials.username} placeholder='Username'></input>
              </div>
              <div className='password'>
-                <i class="fas fa-lock"></i>
+                <i className="fas fa-lock"></i>
                 <input className='signUp-input' type='password' onChange={handleChange} name='password' value={credentials.password} placeholder='Password'></input>
             </div>
         </div> {/* access-inputs end */}
 
         <div className='prev-user'>
-            <p>Already have an account?{' '}<Link to='/login' className='a-tag-logIn' src='#'>Login here.</Link></p>
+            <p>Already have an account?{' '}<Link to='/login' className='a-tag-logIn' src='#'>Login here</Link></p>
         </div>
 
         <div className='button-div'>
@@ -64,7 +65,7 @@ const Register = (props) =>{
     </div> {/* signUp-div end  */}
 
      <div className='form-image'>
-          <img src='https://66.media.tumblr.com/57a304cbe239308bb1e7d13d7c4f978e/tumblr_o2n1ylyF7S1tsnmibo1_400.jpg'></img>
+          <img src='https://66.media.tumblr.com/57a304cbe239308bb1e7d13d7c4f978e/tumblr_o2n1ylyF7S1tsnmibo1_400.jpg' alt='vacation items'></img>
      </div>
 
 </div> /* signUp-Main */

@@ -7,6 +7,7 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         padding: 30px;
+        font-family: 'Poppins', sans-serif;
     }
 
     .create-item {
@@ -38,7 +39,7 @@
     }
 
     ul {
-        padding: 0 20px;
+        padding: 0;
         margin: 0;
     }
 
@@ -53,7 +54,7 @@
         color: #74898a;
         font-size: 1rem;
         font-weight: bold;
-        font-family: 'Merienda One', cursive;
+        font-family: 'Poppins', sans-serif;
         box-shadow: 0 0 3px 3px #74898a;
       
       }

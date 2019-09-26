@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import {axiosWithAuth} from '../utils/axiosWithAuth';
+import React, {useState} from 'react';
+// import {axiosWithAuth} from '../utils/axiosWithAuth';
 import {Link} from 'react-router-dom';
-import LoginPic from '../Images/LoginPic.jpg';
+// import LoginPic from '../Images/LoginPic.jpg';
 import '../scss/Login.scss';
 //import {connect} from 'react-redux';
 import {loginUser} from '../actions';
@@ -36,17 +36,17 @@ const Login = (props) =>{
                 <form onSubmit={handleSubmit}  className='logIn-form'>
                     <div className='access-logIn-inputs'>
                         <div className='username'>
-                            <i class="fas fa-user"></i>
+                            <i className="fas fa-user"></i>
                             <input className='logIn-input' type='text' name='username' onChange={handleChange} value={credentials.username} placeholder='Username'></input>
                          </div>
                          <div className='password'>
-                            <i class="fas fa-lock"></i>
+                            <i className="fas fa-lock"></i>
                             <input className='logIn-input' type='password' name='password' onChange={handleChange} value={credentials.password}  placeholder='Password'></input>
                         </div>
                     </div> {/* access-logIn-inputs end */}
 
                     <div className='none-user'>
-                        <p>Not registered?{' '}<Link to='/register' className='a-tag-logIn' src='#'>Sign up here.</Link></p>
+                        <p>Not registered?{' '}<Link to='/register' className='a-tag-logIn' src='#'>Sign up here</Link></p>
                     </div>
 
                     <div className='button-div2'>
@@ -57,7 +57,7 @@ const Login = (props) =>{
         </div> {/* logIn-div end  */}
 
                 <div className='form-image'>
-                    <img src='https://66.media.tumblr.com/57a304cbe239308bb1e7d13d7c4f978e/tumblr_o2n1ylyF7S1tsnmibo1_400.jpg'></img>
+                    <img src='https://66.media.tumblr.com/57a304cbe239308bb1e7d13d7c4f978e/tumblr_o2n1ylyF7S1tsnmibo1_400.jpg' alt='vacation items'></img>
                 </div>
 
     </div>
