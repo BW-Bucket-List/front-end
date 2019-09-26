@@ -1,19 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous|Titillium+Web:300,400,600&amp;display=swap');
+
+
 .newGoal{
-  width: 500px;
+  //width: 500px;
   height: auto;
   margin: auto;
-  border: 2px solid #232222;
-  background-color: #74898a;
-  color: #e6e6e6;
+  //border: 2px solid #232222;
+  //background-color: #74898a;
+  color: #232222;
   
   
   .goalHeader{
-      background-color: #232222;
+      //background-color: #232222;
       margin-bottom: 30px;
       h2{
-        font-size: 18px;
+        font-family: "Righteous", cursive;
+        font-size: 2.5rem;
         padding-left: 10px;
+        color: #232222;
       }
+  }
+
+  .ui.modal{
+    border-radius: 10px;
+    border: 100px red solid;
   }
 
   .form{
@@ -29,8 +39,8 @@
         height: 30px;
         margin-bottom: 20px;
         font-size: 14px;
-        border: 1px solid #232222;
-        border-radius: 5px;
+        border: 1px solid #74898a;
+        border-radius: 2px;
         padding-left: 5px; 
       }
     
@@ -38,8 +48,8 @@
             width: 100%;
             height: 200px;
             margin-bottom: 30px;
-            border-radius: 5px;
-            border: 1px solid #232222;
+            border-radius: 4px;
+            border: 1px solid #74898a;
             padding-left: 5px;
             padding-top: 5px;
         }
@@ -53,9 +63,10 @@
 
             .submitBtn, .cancelBtn{
                 
-                border-radius: 5px;
+                border-radius: 10px;
                 padding: 7px 25px;
-                background-color: #e6e6e6;
+                color: #74898a;
+                background-color: #fcc024;
     
                 :hover{
                     color: #e6e6e6;
