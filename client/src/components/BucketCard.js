@@ -15,10 +15,11 @@ function BucketCard (props) {
         <Card key={'1'} className='bucket-card'>
         <Image src={bucketPic} wrapped ui={false} />
         <Card.Content>
-            <h2>Bucket List</h2>
             <Card.Header>{'Title: ' + name}</Card.Header>
             <Card.Meta></Card.Meta>
-            <Card.Description>{'isPrivate: ' + isPrivate}</Card.Description>
+            {isPrivate > 0 ? <Card.Description>{'Status: Private'}</Card.Description> : 
+            <Card.Description>{'Status: Shared'}</Card.Description>}
+            {/* <Card.Description>{'isPrivate: ' + isPrivate}</Card.Description> */}
         </Card.Content>
         <Card.Content extra>
             <button><Link to='/items'>Open The List!</Link></button>

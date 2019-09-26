@@ -5,7 +5,10 @@ import '../scss/BucketList.scss';
 
 function BucketList (props) {
     // bucketList, setServerError state to be passed down as props
-    const {bucketLists, setBucketLists, setServerError} = props;
+    const {sharedBucketLists, setSharedBucketLists, privateBucketLists, 
+        setPrivateBucketLists, setServerError} = props;
+    
+    debugger
 
     // define backend server URL
     const backendURL = '';
@@ -14,7 +17,8 @@ function BucketList (props) {
         axios.get(backendURL)
         .then(response => {
             //to be changed with backend data
-            setBucketLists(response.data);
+            setSharedBucketLists(response.sharedBucketLists);
+            setPrivateBucketLists(response.privateBucketLists);
         })
         .catch(err => {
             //set server error message
@@ -25,12 +29,23 @@ function BucketList (props) {
     return (
         <div className='buckets'>
         <section className='bucket-list'>
-            {bucketLists?
-            bucketLists.map(bucket => (
+            {privateBucketLists?
+            privateBucketLists.map(bucket => (
                 <BucketCard
-                key={bucket.id} 
-                name={bucket.name}
-                isPrivate={bucket.isPrivate}/>
+                key={bucket.bucket_list_id} 
+                name={bucket.bucket_list_name}
+                isPrivate={bucket.private}
+                />
+            ))
+            : null }
+
+            {sharedBucketLists?
+            sharedBucketLists.map(bucket => (
+                <BucketCard
+                key={bucket.bucket_list_id} 
+                name={bucket.bucket_list_name}
+                isPrivate={bucket.private}
+                />
             ))
             : null }
         </section>
