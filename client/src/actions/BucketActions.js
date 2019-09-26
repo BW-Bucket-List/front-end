@@ -12,6 +12,22 @@ export const DELETE_BUCKET_START = 'DELETE_BUCKET_START';
 export const DELETE_BUCKET_SUCCESS = 'DELETE_BUCKET_SUCCESS';
 export const DELETE_BUCKET_FAILURE = 'DELETE_BUCKET_FAILURE';
 
+export const GET_BUCKET_START = 'GET_BUCKET_START';
+export const GET_BUCKET_SUCCESS = 'GET_BUCKET_SUCCESS';
+export const GET_BUCKET_FAILURE = 'GET_BUCKET_FAILURE';
+
+export const getBucket = () => dispatch =>{
+  dispatch({type: GET_BUCKET_START});
+  axiosWithAuth()
+    .get()
+    .then(res =>{
+      console.log(res)
+    })
+    .catch(err =>{
+      console.log(err)
+    })
+}
+
 export const createBucket = () => dispatch =>{
   dispatch({type: CREATE_BUCKET_START});
   axiosWithAuth()
