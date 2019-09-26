@@ -1,14 +1,15 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {withFormik, Form, Field} from "formik";
 import * as Yup from "yup";
 import "../scss/CreateNewItem.scss"
 import {Button, Modal} from "semantic-ui-react"
+import axios from "axios"
 
 
-const CreateNewItem = (errors, values, touched) =>{
+const CreateNewItem = ({errors, touched, status}) =>{
     
     
-    // const [goal, setGoal] = useState({name: "", category: "", location: "", date: ""});
+    const [goal, setGoal] = useState([]);
         
         
 
@@ -19,17 +20,18 @@ const CreateNewItem = (errors, values, touched) =>{
     //Prevents refresh of the page
     // const preventRefresh = event =>{
     //     event.preventDefault();
-    //     props.
+    //     console.log("clicked")
     // }
 
-    // useEffect(() =>{
-    //     if(status){
-    //         setGoal([...goal, status])
-    //     }
-    // }, [status]);
+    useEffect(() =>{
+        if(status){
+            setGoal([...goal, status])
+        }
+    }, [status]);
 
     return(
         <Modal trigger={
+            // This button appears in Items.js
             <Button color="gray" className="neutral">
             Create New Goal
             </Button>
@@ -42,7 +44,7 @@ const CreateNewItem = (errors, values, touched) =>{
             </div>
             
             <Form className="form" 
-            // onSubmit={handleSubmit}
+            //onSubmit={handleSubmit}
             >
                 <Field type="text" 
                 className="field" 
@@ -51,7 +53,7 @@ const CreateNewItem = (errors, values, touched) =>{
                 style={
                 // If the user clicks on this field and leaves it blank, or tries to submit with filling out the field, an error will appear.  This styles the border.
                 errors.name && touched.name ? {border: "1px solid red"} : null} />
-                {errors.name && touched.name && (<>{errors.name}</>)}
+                {errors.name && touched.name && (<p>{errors.name}</p>)}
 
                 <Field type="text" 
                 className="field" 
@@ -99,8 +101,11 @@ const CreateNewItem = (errors, values, touched) =>{
                  */}
             </Form>
         </div>
+
         </Modal.Content>
         </Modal>
+
+        
     )
 }
 
@@ -124,15 +129,16 @@ const FormikNewGoal = withFormik({
     // }
 
     // Api
-    // submitHandler(values,{setStatus}){
-    //     axios
-    //         .post("https://reqres.in/api/users/", values)
-    //         .then(response =>{
-    //             console.log(response)
-    //             setGoal(response.data);
-    //         })
-    //         .catch(error=> console.log(error.response))
-    // }
+    handleSubmit(values, {setStatus}){
+        axios
+            .post("https://reqres.in/api/users/", values)
+            .then(response =>{
+                console.log(response)
+                setStatus(response.data);
+
+            })
+            .catch(error=> console.log(error.response))
+    }
 
 })(CreateNewItem)
 
