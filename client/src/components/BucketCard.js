@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, Image, Modal, Button } from 'semantic-ui-react';
+import { Card, Image} from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import '../scss/BucketCard.scss';
 import bucketPic from '../Images/bucketList.jpg';
-import Items from '../components/Items';
+// import Items from '../components/Items';
 import {Link} from 'react-router-dom';
 
 //import LoginPic from '../Images/LoginPic.jpg';

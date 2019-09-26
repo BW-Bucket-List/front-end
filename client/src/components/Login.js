@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import {axiosWithAuth} from '../utils/axiosWithAuth';
+import React, {useState} from 'react';
+// import {axiosWithAuth} from '../utils/axiosWithAuth';
 import {Link} from 'react-router-dom';
-import LoginPic from '../Images/LoginPic.jpg';
+// import LoginPic from '../Images/LoginPic.jpg';
 import '../scss/Login.scss';
 import {connect} from 'react-redux';
 import {loginUser} from '../actions';
@@ -57,7 +57,7 @@ const Login = (props) =>{
         </div> {/* logIn-div end  */}
 
                 <div className='form-image'>
-                    <img src='https://66.media.tumblr.com/57a304cbe239308bb1e7d13d7c4f978e/tumblr_o2n1ylyF7S1tsnmibo1_400.jpg'></img>
+                    <img src='https://66.media.tumblr.com/57a304cbe239308bb1e7d13d7c4f978e/tumblr_o2n1ylyF7S1tsnmibo1_400.jpg' alt='vacation items'></img>
                 </div>
 
     </div>

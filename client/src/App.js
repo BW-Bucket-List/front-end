@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './scss/App.scss';
-import {Route, Link} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute'
 import CreateNewItem from "./components/CreateNewItem"
 import Login from './components/Login';
 import Register from './components/Register';
 import ProfilePage from './components/ProfilePage';
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
 import BucketList from './components/BucketList';
 import Items from './components/Items';
 
