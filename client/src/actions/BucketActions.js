@@ -16,12 +16,12 @@ export const GET_BUCKET_START = 'GET_BUCKET_START';
 export const GET_BUCKET_SUCCESS = 'GET_BUCKET_SUCCESS';
 export const GET_BUCKET_FAILURE = 'GET_BUCKET_FAILURE';
 
-export const getBucket = () => dispatch =>{
+export const getBucket = (id) => dispatch =>{
   dispatch({type: GET_BUCKET_START});
   axiosWithAuth()
-    .get()
+    .get(`/user/${id}`)
     .then(res =>{
-      console.log(res)
+      console.log(res.data)
     })
     .catch(err =>{
       console.log(err)

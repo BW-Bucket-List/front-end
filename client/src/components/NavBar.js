@@ -16,7 +16,7 @@ function NavBar() {
                   <a href="https://bucket-list-kb.netlify.com/about.html" className="HeaderLinks">About Us</a>
                   <Link to='/' className="HeaderLinks">Login</Link>
                   <Link to='/profile' className="HeaderLinks">Profile</Link>
-                  <Link to='/buckets' className="HeaderLinks">My Buckets</Link>
+                  <Link to='/bucket' className="HeaderLinks">My Buckets</Link>
                 </div>
 
               {/* </div> nav-links end */}

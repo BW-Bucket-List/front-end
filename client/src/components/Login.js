@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
-// import {axiosWithAuth} from '../utils/axiosWithAuth';
 import {Link} from 'react-router-dom';
-// import LoginPic from '../Images/LoginPic.jpg';
 import '../scss/Login.scss';
-//import {connect} from 'react-redux';
+import {connect} from 'react-redux';
 import {loginUser} from '../actions';
 
 const Login = (props) =>{
@@ -23,7 +21,7 @@ const Login = (props) =>{
     console.log('Do IT!');
     e.preventDefault();
     props.loginUser(credentials);
-    props.history.push('')
+    props.history.push('/bucket')
   }
 
   return(
@@ -57,6 +55,5 @@ const mapStateToProps = state =>{
   }
 }
 
-// export default connect(mapStateToProps,{loginUser})(Login);
+export default connect(mapStateToProps,{loginUser})(Login);
 
-export default Login;
