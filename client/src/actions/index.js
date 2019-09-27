@@ -12,6 +12,10 @@ export const GET_BUCKET_START = 'GET_BUCKET_START';
 export const GET_BUCKET_SUCCESS = 'GET_BUCKET_SUCCESS';
 export const GET_BUCKET_FAILURE = 'GET_BUCKET_FAILURE';
 
+export const CREATE_ITEM_START = 'CREATE_ITEM_START';
+export const CREATE_ITEM_SUCCESS = 'CREATE_ITEM_SUCCESS';
+export const CREATE_ITEM_FAILURE = 'CREATE_ITEM_FAILURE';
+
 
 export const loginUser = (credentials) => dispatch =>{
   console.log(credentials);
@@ -55,4 +59,19 @@ export const getBucket = (user_id) => dispatch =>{
       console.log(err)
     })
 }
+
+export const createItem = (bucket_list_id) => dispatch =>{
+  dispatch({type: CREATE_ITEM_START});
+  axiosWithAuth()
+   .post(`/bucket/${bucket_list_id}/items`)
+   .then(res =>{
+     console.log('bucket id inside POST ITEM', bucket_list_id);
+     console.log(res.data) 
+     dispatch({type: CREATE_ITEM_SUCCESS, payload:res.data})
+   })
+   .catch(err =>{
+    console.log(err);
+  }) 
+}
+
 

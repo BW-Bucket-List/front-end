@@ -7,7 +7,8 @@ const initialState = {
   isAuth: false,
   error: '',
   //user:{all data from GET USER by ID OR from LOGIN}
-  user:{}
+  user:{},
+  bucket:[{}]
   };
 
 
