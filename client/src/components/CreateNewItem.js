@@ -131,7 +131,7 @@ const FormikNewGoal = withFormik({
     // Api
     handleSubmit(values, {setStatus}){
         axios
-            .post("https://reqres.in/api/users/", values)
+            .post("https://bucketlist-bw.herokuapp.com/bucket/items", values)
             .then(response =>{
                 console.log(response)
                 setStatus(response.data);

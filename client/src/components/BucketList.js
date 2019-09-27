@@ -1,29 +1,22 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import BucketCard from './BucketCard';
 import '../scss/BucketList.scss';
+import {connect} from 'react-redux';
+import {getBucket} from '../actions';
+
 
 function BucketList (props) {
     // bucketList, setServerError state to be passed down as props
-    const {sharedBucketLists, setSharedBucketLists, privateBucketLists, 
-        setPrivateBucketLists, setServerError} = props;
-
-    // define backend server URL
-    const backendURL = '';
+    const {sharedBucketLists,privateBucketLists} = props.user;
+console.log('User ID Props in Bucket',props.user)
+    const[user,setUser]=useState(props.user)
 
     useEffect(() => {
-        axios.get(backendURL)
-        .then(response => {
-            //to be changed with backend data
-            setSharedBucketLists(response.sharedBucketLists);
-            setPrivateBucketLists(response.privateBucketLists);
-        })
-        .catch(err => {
-            //set server error message
-            setServerError(err.message);
-        })
+        props.getBucket(2)
     },[])
-
+    useEffect(()=>{
+        setUser(props.user)
+    },[props.user])
     return (
         <div className='buckets'>
         <section className='bucket-list'>
@@ -50,5 +43,9 @@ function BucketList (props) {
         </div>
     );
 }
+const mapStateToProps = state =>({
+    user:state.user,
+    isAuth:state.isAuth
+  })
 
-export default BucketList;
+export default connect(mapStateToProps,{getBucket})(BucketList);

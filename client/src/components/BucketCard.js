@@ -18,7 +18,7 @@ function BucketCard (props) {
             <Card.Header>{'Title: ' + name}</Card.Header>
             <Card.Meta></Card.Meta>
             {isPrivate > 0 ? <Card.Description>{'Status: Private'}</Card.Description> : 
-            <Card.Description>{'Status: Shared'}</Card.Description>}
+            <Card.Description>{`Status:${isPrivate}`}</Card.Description>}
             {/* <Card.Description>{'isPrivate: ' + isPrivate}</Card.Description> */}
         </Card.Content>
         <Card.Content extra>
